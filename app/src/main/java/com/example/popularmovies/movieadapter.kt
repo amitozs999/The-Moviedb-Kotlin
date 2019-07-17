@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.layout_1.view.*
 
 class movieadapter(val context:Context,val namelist:List<movie>,val check:Boolean):RecyclerView.Adapter<movieadapter.myviewholder>() {
 
-    val baseURL = "https://image.tmdb.org/t/p/w500/"
+    val baseURL = "https://image.tmdb.org/t/p/w342/"
     class myviewholder(itemView:View):RecyclerView.ViewHolder(itemView)
 
     override fun getItemCount(): Int {

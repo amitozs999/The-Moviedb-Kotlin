@@ -3,7 +3,6 @@ package com.example.popularmovies
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.GridLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -40,10 +39,11 @@ class MainActivity : AppCompatActivity() {
                 val data1= data?.results
 
 
-
+              //  rView.layoutManager =
+               //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
 
                 rView.layoutManager =
-                    GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
+                    LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL,false)
                 rView.adapter = data1?.let { movieadapter(this@MainActivity, it,false) }
 
 
