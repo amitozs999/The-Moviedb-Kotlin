@@ -1,59 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/white"
-        tools:context=".MainActivity">
-    <TextView
-            android:drawableLeft="@android:drawable/presence_away"
-            android:text="POPULAR"
-            android:layout_margin="10dp"
-            android:textColor="@android:color/black"
-            android:id="@+id/textDest"
-            android:textSize="20sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    <androidx.recyclerview.widget.RecyclerView
-            android:layout_weight="1"
-            android:layout_margin="10dp"
 
-            android:id="@+id/rView"
+
+<FrameLayout
+
+        android:layout_height="match_parent" android:layout_width="match_parent"
+             xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-    </androidx.recyclerview.widget.RecyclerView>
-    <LinearLayout
-            android:id="@+id/lastLayout"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <ImageButton
-                android:id="@+id/backwardN"
-                android:layout_margin="10dp"
-                android:background="@android:color/black"
-                android:layout_gravity="center"
-                android:src="@android:drawable/ic_media_previous"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        <TextView
-                android:textColor="@android:color/holo_orange_light"
-                android:text="1"
-                android:textSize="20sp"
-                android:id="@+id/trackN"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        <ImageButton
-                android:id="@+id/next"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_orange_light"
-                android:layout_gravity="center"
-                android:src="@android:drawable/ic_media_next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-    </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:paddingLeft="12dp">
 
 
-</LinearLayout>
+                <TextView
+
+                        android:text="POPULAR"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/textDest"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_marginLeft="12dp"
+                        android:layout_marginTop="20dp"/>
+            </FrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+
+                    android:id="@+id/rView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" android:paddingLeft="12dp">
+
+
+                <TextView
+
+                        android:text="TOP RATED"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/textDest2"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                        android:layout_marginLeft="12dp"/>
+            </FrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+
+                    android:id="@+id/rView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

@@ -32,7 +32,7 @@ class movieadapter(val context:Context,val namelist:List<movie>,val check:Boolea
 
     override fun onBindViewHolder(holder: myviewholder, position: Int) {
 
-        val item1= namelist?.get(position)
+        val item1= this.namelist[position]
         holder.itemView.ltView.text=item1.original_title
         val target=item1.poster_path
         Picasso.get().load(baseURL+target).into(holder.itemView.liView)
