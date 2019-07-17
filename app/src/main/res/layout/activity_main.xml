@@ -12,6 +12,35 @@
             android:layout_height="match_parent">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:orientation="vertical">
+
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" android:paddingLeft="12dp">
+
+
+                <TextView
+
+                        android:text="Now Playing"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/text0"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                        android:layout_marginLeft="12dp"/>
+            </FrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+
+                    android:id="@+id/rView0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
             <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:paddingLeft="12dp">
@@ -19,10 +48,10 @@
 
                 <TextView
 
-                        android:text="POPULAR"
+                        android:text="Popular"
                         android:fontFamily="sans-serif-black"
                         android:textColor="@android:color/black"
-                        android:id="@+id/textDest"
+                        android:id="@+id/text1"
                         android:textSize="20sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:layout_marginLeft="12dp"
@@ -44,10 +73,10 @@
 
                 <TextView
 
-                        android:text="TOP RATED"
+                        android:text="Top Rated"
                         android:fontFamily="sans-serif-black"
                         android:textColor="@android:color/black"
-                        android:id="@+id/textDest2"
+                        android:id="@+id/text2"
                         android:textSize="20sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:layout_marginTop="10dp"
@@ -58,6 +87,32 @@
                     android:orientation="horizontal"
 
                     android:id="@+id/rView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" android:paddingLeft="12dp">
+
+
+                <TextView
+
+                        android:text="Upcoming"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/text3"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                        android:layout_marginLeft="12dp"/>
+            </FrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+
+                    android:id="@+id/rView3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 

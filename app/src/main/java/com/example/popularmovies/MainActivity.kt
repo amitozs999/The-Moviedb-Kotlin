@@ -1,5 +1,6 @@
 package com.example.popularmovies
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -37,6 +38,8 @@ class MainActivity : AppCompatActivity() {
     fun start()
     {
         val service=retrofit.create(popinterface::class.java)
+
+
 
             service.getPopular(api_key).enqueue(object : Callback<movieresponse> {
             override fun onFailure(call: Call<movieresponse>, t: Throwable) {
@@ -83,6 +86,58 @@ class MainActivity : AppCompatActivity() {
                 rView2.layoutManager =
                     LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL,false)
                 rView2.adapter = data1?.let { movieadapter(this@MainActivity, it,false) }
+
+
+
+            }
+        })
+
+
+        service.getUpcoming(api_key).enqueue(object : Callback<movieresponse> {
+            override fun onFailure(call: Call<movieresponse>, t: Throwable) {
+                Log.d("MoviesDagger", t.toString())
+            }
+
+
+
+            override fun onResponse(call: Call<movieresponse>, response: Response<movieresponse>) {
+
+                val data=response.body()
+                val data1= data?.results
+
+
+                //  rView.layoutManager =
+                //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
+
+                rView3.layoutManager =
+                    LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL,false)
+                rView3.adapter = data1?.let { movieadapter(this@MainActivity, it,false) }
+
+
+
+            }
+        })
+
+
+        service.getNowplaying(api_key).enqueue(object : Callback<movieresponse> {
+            override fun onFailure(call: Call<movieresponse>, t: Throwable) {
+                Log.d("MoviesDagger", t.toString())
+            }
+
+
+
+            override fun onResponse(call: Call<movieresponse>, response: Response<movieresponse>) {
+
+                val data=response.body()
+                val data1= data?.results
+
+
+                //  rView.layoutManager =
+                //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
+
+                rView0.layoutManager =
+                    LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL,false)
+                rView0.adapter = data1?.let { upmovieadapter(this@MainActivity, it,false) }
 
 
 

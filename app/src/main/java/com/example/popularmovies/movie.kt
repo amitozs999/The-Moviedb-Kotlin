@@ -9,5 +9,6 @@ data class movieresponse(
 data class movie(
     var id : String,
     var original_title : String,
-    var poster_path : String
+    var poster_path : String,
+    var backdrop_path:String
 )
