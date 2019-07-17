@@ -1,9 +1,11 @@
 package com.example.popularmovies
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.layout_1.view.*
@@ -37,6 +39,15 @@ class movieadapter(val context:Context,val namelist:List<movie>,val check:Boolea
         holder.itemView.ltView.text=item1.original_title
         val target=item1.poster_path
         Picasso.get().load(baseURL+target).into(holder.itemView.liView)
+
+        holder.itemView.parentLayout.setOnClickListener {
+
+            val intent= Intent(context,activity_second::class.java)
+            intent.putExtra("item",item1.id)
+            intent.putExtra("type","Movie")
+            startActivity(context,intent,null)
+        }
+
          }
 
 
