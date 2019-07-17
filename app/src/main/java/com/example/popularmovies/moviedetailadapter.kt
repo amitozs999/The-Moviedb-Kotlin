@@ -5,15 +5,16 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_second.view.*
 import kotlinx.android.synthetic.main.layout_1.view.*
 
-class movieadapter(val context:Context,val namelist:List<movie>,val check:Boolean):RecyclerView.Adapter<movieadapter.myviewholder>() {
+class moviedetailadapter(val context: Context, val namelist:List<movie>, val check:Boolean): RecyclerView.Adapter<moviedetailadapter.myviewholder>() {
 
     val baseURL = "https://image.tmdb.org/t/p/w342/"
-    class myviewholder(itemView:View):RecyclerView.ViewHolder(itemView)
+    class myviewholder(itemView: View): RecyclerView.ViewHolder(itemView)
 
     override fun getItemCount(): Int {
         if(check==false)
@@ -28,27 +29,23 @@ class movieadapter(val context:Context,val namelist:List<movie>,val check:Boolea
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myviewholder {
 
         var li=parent.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val itemView=li.inflate(R.layout.layout_1,parent,false)
+        val itemView=li.inflate(R.layout.activity_second,parent,false)
         return myviewholder(itemView)
 
-       }
+    }
 
     override fun onBindViewHolder(holder: myviewholder, position: Int) {
 
         val item1= this.namelist[position]
-        holder.itemView.ltView.text=item1.original_title
+
+
+
         val target=item1.poster_path
-        Picasso.get().load(baseURL+target).into(holder.itemView.liView)
+        Picasso.get().load(baseURL+target).into(holder.itemView.iview)
 
-        holder.itemView.parentLayout.setOnClickListener {
 
-            val intent= Intent(context,activity_second::class.java)
-            intent.putExtra("id",item1.id)
-            intent.putExtra("type","Movie")
-            startActivity(context,intent,null)
-        }
 
-         }
+    }
 
 
 }

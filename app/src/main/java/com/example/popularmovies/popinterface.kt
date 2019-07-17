@@ -3,6 +3,7 @@ package com.example.popularmovies
 
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface popinterface {
@@ -34,7 +35,19 @@ interface popinterface {
         // @Query("page") page : String
     ) : Call<movieresponse>
 
+    @GET("3/movie/{movie_id}/images")
+    fun getimage(
+        @Path("id") id:String,
+        @Query("api_key") key:String
+        // @Query("page") page : String
+    ) : Call<movieresponse>
 
+    @GET("3/movie/{id}")
+    fun getmovies(
+
+        @Path("id") id:Int,
+        @Query("api_key") key: String
+    ) :Call<movie_search>
 
 
 
