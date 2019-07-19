@@ -35,38 +35,39 @@
 
         </RelativeLayout>
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:orientation="horizontal"
-            android:background="#324C58" android:layout_marginTop="-2dp">
-        <LinearLayout
-                android:layout_width="wrap_content" android:layout_height="match_parent">
-            <ImageView
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_width="120dp" android:layout_height="170dp" android:layout_marginRight="30dp"
-                    android:id="@+id/imageview2" android:visibility="visible"/>
-        </LinearLayout>
-        <LinearLayout android:layout_width="215dp" android:layout_height="match_parent"
-                      android:orientation="vertical">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="horizontal"
+                    android:background="#324C58" android:layout_marginTop="-2dp" android:layout_alignParentStart="true">
+                <LinearLayout
+                        android:layout_width="wrap_content" android:layout_height="match_parent">
+                    <ImageView
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="120dp" android:layout_height="170dp" android:layout_marginRight="30dp"
+                            android:id="@+id/imageview2" android:visibility="visible"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="215dp" android:layout_height="match_parent"
+                              android:orientation="vertical">
 
-            <TextView android:layout_width="match_parent" android:layout_height="35dp" android:text="TITLE"
-                      android:layout_marginTop="60dp"
-                      android:textColor="@android:color/white" android:id="@+id/tv1" android:textSize="15sp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="35dp" android:text="TITLE"
+                              android:layout_marginTop="60dp"
+                              android:textColor="@android:color/white" android:id="@+id/tv1" android:textSize="15sp"/>
 
-            <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:src="@drawable/ic_star_2"
-                    android:id="@+id/imageButton" android:background="#324C58"
-            />
-            <TextView android:layout_width="80dp" android:layout_height="45dp" android:textColor="@android:color/white"
-                      android:text="TITLE"
-                      android:layout_marginLeft="30dp" android:layout_marginTop="-20dp" android:id="@+id/tv3"/>
-        </LinearLayout>
+                    <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:src="@drawable/ic_star_2"
+                            android:id="@+id/imageButton" android:background="#324C58"
+                    />
+                    <TextView android:layout_width="80dp" android:layout_height="45dp"
+                              android:textColor="@android:color/white"
+                              android:text="TITLE"
+                              android:layout_marginLeft="30dp" android:layout_marginTop="-20dp" android:id="@+id/tv3"/>
+                </LinearLayout>
 
-    </LinearLayout>
+            </LinearLayout>
             <LinearLayout
 
                     android:layout_width="match_parent"
@@ -100,6 +101,28 @@
                         android:orientation="horizontal"
 
                         android:id="@+id/rView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView
+                        android:text="Similar Movies"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_height="30dp" android:id="@+id/textView5"
+                        android:textSize="22sp" android:layout_marginLeft="10sp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+
+                        android:id="@+id/rView21"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 

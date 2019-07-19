@@ -92,6 +92,32 @@ class activity_second : AppCompatActivity() {
             }
         })
 
+        service.getsimilar(id,api_key).enqueue(object : Callback<similarresonse> {
+            override fun onFailure(call: Call<similarresonse>, t: Throwable) {
+                Log.d("MoviesDagger", t.toString())
+            }
+
+
+
+            override fun onResponse(call: Call<similarresonse>, response: Response<similarresonse>) {
+
+                val data=response.body()
+                val data1= data?.results
+
+
+                //  rView.layoutManager =
+                //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
+
+                rView21.layoutManager =
+                    LinearLayoutManager(this@activity_second, RecyclerView.HORIZONTAL,false)
+                rView21.adapter = data1?.let { similarmovieadapter(this@activity_second, it,false) }
+
+
+
+            }
+        })
+
+
     }
 
 

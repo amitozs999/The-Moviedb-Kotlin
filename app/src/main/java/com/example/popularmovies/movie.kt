@@ -39,3 +39,13 @@ data class moviecast(
     val name: String,
     val profile_path:String
 )
+data class similarresonse(
+    val page:Int=0,
+    val results:ArrayList<similar>
+
+)
+data class similar(
+    val cast_id:Int,
+    val original_title: String,
+    val poster_path:String
+)

@@ -56,6 +56,14 @@ interface popinterface {
         @Query("api_key") key: String
     ):Call<moviecastresopnse>
 
+    @GET("3/movie/{movie_id}/similar")
+    fun getsimilar(
+
+        @Path("movie_id") movieid:Int,
+        @Query("api_key") key: String
+    ):Call<similarresonse>
+
+
 
 
 
