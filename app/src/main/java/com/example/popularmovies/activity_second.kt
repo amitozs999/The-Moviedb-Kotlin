@@ -18,7 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class activity_second : AppCompatActivity() {
 
 
-    val api_key:String="API-KEY"
+    val api_key:String="0e03d86efe00ea1a1e1dd7d2a4717ba1"
     var maxLimit : Int =996
     val retrofit= Retrofit.Builder().baseUrl("https://api.themoviedb.org/")
         .addConverterFactory(GsonConverterFactory.create())
@@ -48,6 +48,7 @@ class activity_second : AppCompatActivity() {
 
                 if (data != null) {
                     Picasso.get().load(baseURL+data.backdrop_path).resize(413,200).into(iview)
+                  Picasso.get().load(baseURL+data.poster_path).into(imageview2)
                 }
 
 

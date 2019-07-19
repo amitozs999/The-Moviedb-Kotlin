@@ -5,7 +5,48 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".activity_second">
-    <ImageView android:layout_width="match_parent" android:layout_height="200dp" android:id="@+id/iview"/>
 
+
+        <LinearLayout
+                
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+         <ImageView android:layout_width="match_parent" android:layout_height="200dp" android:id="@+id/iview"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:background="#226BA0">
+        <LinearLayout
+                android:layout_width="wrap_content" android:layout_height="match_parent">
+            <ImageView
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="120dp" android:layout_height="170dp" android:layout_marginRight="50dp"
+                    android:id="@+id/imageview2"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+                      android:orientation="vertical">
+
+            <TextView android:layout_width="180dp" android:layout_height="45dp" android:text="TITLE"
+                      android:layout_marginTop="30dp"
+            android:textColor="@android:color/white"/>
+            <TextView android:layout_width="180dp" android:layout_height="45dp" android:text="TITLE" android:textColor="@android:color/white"
+            />
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:src="@drawable/ic_star_1"
+                    android:id="@+id/imageButton" android:background="#226BA0"
+            />
+            <TextView android:layout_width="80dp" android:layout_height="45dp" android:text="TITLE"
+                      android:layout_marginLeft="30dp" android:layout_marginTop="-25dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>

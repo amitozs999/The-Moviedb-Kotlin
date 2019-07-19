@@ -16,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
 
-    val api_key:String="API-KEY"
+    val api_key:String="0e03d86efe00ea1a1e1dd7d2a4717ba1"
     var maxLimit : Int =996
     val retrofit=Retrofit.Builder().baseUrl("https://api.themoviedb.org/")
         .addConverterFactory(GsonConverterFactory.create())
