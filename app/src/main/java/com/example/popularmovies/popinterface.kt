@@ -49,6 +49,12 @@ interface popinterface {
         @Query("api_key") key: String
     ) :Call<movie_search>
 
+    @GET("3/movie/{movie_id}/credits")
+    fun getcast(
+
+        @Path("movie_id") movieid:Int,
+        @Query("api_key") key: String
+    ):Call<moviecastresopnse>
 
 
 

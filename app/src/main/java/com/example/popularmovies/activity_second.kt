@@ -67,6 +67,31 @@ class activity_second : AppCompatActivity() {
             }
         })
 
+        service.getcast(id,api_key).enqueue(object : Callback<moviecastresopnse> {
+            override fun onFailure(call: Call<moviecastresopnse>, t: Throwable) {
+                Log.d("MoviesDagger", t.toString())
+            }
+
+
+
+            override fun onResponse(call: Call<moviecastresopnse>, response: Response<moviecastresopnse>) {
+
+                val data=response.body()
+                val data1= data?.cast
+
+
+                //  rView.layoutManager =
+                //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
+
+                rView20.layoutManager =
+                    LinearLayoutManager(this@activity_second, RecyclerView.HORIZONTAL,false)
+                rView20.adapter = data1?.let { moviecastdapter(this@activity_second, it,false) }
+
+
+
+            }
+        })
+
     }
 
 

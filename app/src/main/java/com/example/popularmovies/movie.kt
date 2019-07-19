@@ -28,3 +28,14 @@ data class movie_search(
 data class Genre(
     val name : String
 )
+
+data class moviecastresopnse(
+    val id:Int=0,
+    val cast:ArrayList<moviecast>
+
+)
+data class moviecast(
+    val cast_id:Int,
+    val name: String,
+    val profile_path:String
+)
