@@ -57,6 +57,7 @@ class activity_second : AppCompatActivity() {
                 tv7.text=data?.original_title
                 tv1.text="Release Date    " +data?.release_date
                 tv3.text=data?.vote_average+"/10"
+                tvoverview.text=data?.overview
 
 
 

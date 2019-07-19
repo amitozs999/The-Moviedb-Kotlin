@@ -7,6 +7,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".activity_second">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical" android:layout_height="match_parent">
 
 
         <RelativeLayout
@@ -62,20 +67,46 @@
         </LinearLayout>
 
     </LinearLayout>
-    <LinearLayout
+            <LinearLayout
 
-            android:layout_width="match_parent"
-            android:layout_height="111dp" android:orientation="vertical">
-        <TextView
-                android:text="Description"
-                android:layout_width="wrap_content"
-                android:fontFamily="sans-serif-black"
-                android:layout_height="30dp" android:id="@+id/textView"
-                android:textSize="22sp" android:layout_marginLeft="10sp"/>
-        <TextView
-                android:text="TextView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" android:id="@+id/textView2" android:layout_marginLeft="10sp"
-                android:layout_marginRight="10sp" android:layout_marginBottom="10sp"/>
-    </LinearLayout>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView
+                        android:text="Description"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_height="30dp" android:id="@+id/textView"
+                        android:textSize="22sp" android:layout_marginLeft="10sp"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/tvoverview"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp" android:layout_marginBottom="10sp"
+                        android:layout_marginTop="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="156dp" android:orientation="vertical">
+                <TextView
+                        android:text="Cast"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_height="30dp" android:id="@+id/textView4"
+                        android:textSize="22sp" android:layout_marginLeft="10sp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+
+                        android:id="@+id/rView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
