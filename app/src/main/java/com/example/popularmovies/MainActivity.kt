@@ -2,12 +2,17 @@ package com.example.popularmovies
 
 
 import android.app.ProgressDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -23,9 +28,34 @@ class MainActivity : AppCompatActivity() {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
+    lateinit var toolbar: android.app.ActionBar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        var toolbar = supportActionBar
+        val naview=findViewById<View>(R.id.nav) as BottomNavigationView
+        naview.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.movies -> {
+                    val  intent1=Intent(this,MainActivity::class.java)
+                    startActivity(intent1)
+                    return@setOnNavigationItemSelectedListener  true
+                }
+                R.id.tv -> {
+                    val  intent2=Intent(this,Activity3::class.java)
+                    startActivity(intent2)
+                    return@setOnNavigationItemSelectedListener  true
+                }
+                else-> return@setOnNavigationItemSelectedListener  true
+
+
+            }
+
+        }
+
+
+
 
 
 
