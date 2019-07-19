@@ -1,6 +1,7 @@
 package com.example.popularmovies
 
 
+import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -120,6 +121,9 @@ class MainActivity : AppCompatActivity() {
 
 
         service.getNowplaying(api_key).enqueue(object : Callback<movieresponse> {
+
+
+
             override fun onFailure(call: Call<movieresponse>, t: Throwable) {
                 Log.d("MoviesDagger", t.toString())
             }

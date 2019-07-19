@@ -46,6 +46,7 @@ data class similarresonse(
 )
 data class similar(
     val cast_id:Int,
+    val id: Int,
     val original_title: String,
     val poster_path:String
 )

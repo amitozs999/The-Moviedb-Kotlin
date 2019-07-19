@@ -31,6 +31,7 @@ class activity_second : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
+        
 
         val id = intent.getStringExtra("id").toInt()
 
@@ -92,14 +93,15 @@ class activity_second : AppCompatActivity() {
             }
         })
 
-        service.getsimilar(id,api_key).enqueue(object : Callback<similarresonse> {
-            override fun onFailure(call: Call<similarresonse>, t: Throwable) {
+        service.getsimilar(id,api_key).enqueue(object : Callback<movieresponse> {
+            override fun onFailure(call: Call<movieresponse>, t: Throwable) {
                 Log.d("MoviesDagger", t.toString())
             }
 
 
 
-            override fun onResponse(call: Call<similarresonse>, response: Response<similarresonse>) {
+
+            override fun onResponse(call: Call<movieresponse>, response: Response<movieresponse>) {
 
                 val data=response.body()
                 val data1= data?.results
@@ -110,7 +112,7 @@ class activity_second : AppCompatActivity() {
 
                 rView21.layoutManager =
                     LinearLayoutManager(this@activity_second, RecyclerView.HORIZONTAL,false)
-                rView21.adapter = data1?.let { similarmovieadapter(this@activity_second, it,false) }
+                rView21.adapter = data1?.let { movieadapter(this@activity_second, it,false) }
 
 
 

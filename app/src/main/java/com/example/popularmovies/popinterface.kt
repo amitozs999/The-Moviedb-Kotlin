@@ -61,7 +61,7 @@ interface popinterface {
 
         @Path("movie_id") movieid:Int,
         @Query("api_key") key: String
-    ):Call<similarresonse>
+    ):Call<movieresponse>
 
 
 
