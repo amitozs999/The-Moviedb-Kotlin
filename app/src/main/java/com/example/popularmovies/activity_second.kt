@@ -1,5 +1,8 @@
 package com.example.popularmovies
 
+import android.graphics.Color
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -46,10 +49,16 @@ class activity_second : AppCompatActivity() {
                 val data=response.body()
 
 
+
                 if (data != null) {
                     Picasso.get().load(baseURL+data.backdrop_path).resize(413,200).into(iview)
                   Picasso.get().load(baseURL+data.poster_path).into(imageview2)
                 }
+                tv7.text=data?.original_title
+                tv1.text="Release Date    " +data?.release_date
+                tv3.text=data?.vote_average+"/10"
+
+
 
 
 
