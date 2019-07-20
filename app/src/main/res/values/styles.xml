@@ -8,6 +8,9 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="noAnimTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
     <!--<style name="AppFullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
         <!--<item name="android:windowNoTitle">true</item>-->
         <!--<item name="android:windowActionBar">false</item>-->

@@ -35,6 +35,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         var toolbar = supportActionBar
         val naview=findViewById<View>(R.id.nav) as BottomNavigationView
+         var menu = naview.menu
+        var menuItem = menu.getItem(0)
+        menuItem.isChecked = true
         naview.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.movies -> {
