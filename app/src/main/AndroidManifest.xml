@@ -13,6 +13,12 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".viewallact"
+                  android:theme="@style/noAnimTheme">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity"/>
+        </activity>
         <activity android:name=".Activity_5">
         </activity>
         <activity

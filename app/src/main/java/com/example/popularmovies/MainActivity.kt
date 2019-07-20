@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.ActionBar
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -72,6 +73,19 @@ class MainActivity : AppCompatActivity() {
     fun start()
     {
         val service=retrofit.create(popinterface::class.java)
+
+
+            text00.setOnClickListener {
+
+
+                val intent= Intent(this,viewallact::class.java)
+
+                intent.putExtra("type","Popular")
+               startActivity(intent,null)
+
+            }
+
+
 
 
 

@@ -40,9 +40,19 @@ android:id="@+id/nav"
                         android:textColor="@android:color/black"
                         android:id="@+id/text0"
                         android:textSize="20sp"
-                        android:layout_width="match_parent"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content" android:layout_marginTop="10dp"
                         android:layout_marginLeft="12dp"/>
+                <TextView
+
+                        android:text="➞"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@android:color/darker_gray"
+                        android:id="@+id/text00"
+                        android:textSize="20dp"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                        android:layout_marginLeft="355dp"/>
             </FrameLayout>
             <androidx.recyclerview.widget.RecyclerView
                     android:layout_weight="1"
@@ -70,6 +80,16 @@ android:id="@+id/nav"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:layout_marginLeft="12dp"
                         android:layout_marginTop="20dp"/>
+                <TextView
+
+                        android:text="➞"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@android:color/darker_gray"
+                        android:id="@+id/text10"
+                        android:textSize="20dp"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                        android:layout_marginLeft="355dp"/>
             </FrameLayout>
             <androidx.recyclerview.widget.RecyclerView
                     android:layout_weight="1"
@@ -95,6 +115,16 @@ android:id="@+id/nav"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:layout_marginTop="10dp"
                         android:layout_marginLeft="12dp"/>
+                <TextView
+
+                        android:text="➞"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@android:color/darker_gray"
+                        android:id="@+id/text20"
+                        android:textSize="20dp"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                        android:layout_marginLeft="355dp"/>
             </FrameLayout>
             <androidx.recyclerview.widget.RecyclerView
                     android:layout_weight="1"
@@ -121,6 +151,16 @@ android:id="@+id/nav"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:layout_marginTop="10dp"
                         android:layout_marginLeft="12dp"/>
+                <TextView
+
+                        android:text="➞"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@android:color/darker_gray"
+                        android:id="@+id/text30"
+                        android:textSize="20dp"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                        android:layout_marginLeft="355dp"/>
             </FrameLayout>
             <androidx.recyclerview.widget.RecyclerView
                     android:layout_weight="1"
