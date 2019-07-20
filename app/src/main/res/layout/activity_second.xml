@@ -5,8 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".activity_second">
+        tools:context=".activity_second" android:orientation="vertical">
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -14,26 +13,26 @@
                       android:orientation="vertical" android:layout_height="match_parent">
 
 
-        <RelativeLayout
-                android:id="@+id/rl1"
-                
-                android:layout_width="match_parent"
-                android:layout_height="200dp">
-            <ImageView android:layout_width="match_parent" android:layout_height="200dp" android:id="@+id/iview"
-            />
-            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-                <TextView android:layout_width="250dp" android:layout_height="67dp"
-                          android:textStyle="bold"
+            <RelativeLayout
+                    android:id="@+id/rl1"
 
-                          android:id="@+id/tv7" android:layout_marginTop="130dp" android:layout_marginLeft="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="200dp" android:id="@+id/iview"
+                />
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:layout_width="250dp" android:layout_height="67dp"
+                              android:textStyle="bold"
 
-                          android:text="TITLE"
+                              android:id="@+id/tv7" android:layout_marginTop="130dp" android:layout_marginLeft="50dp"
 
-                          android:textColor="@android:color/white" android:textSize="25dp"/>
+                              android:text="TITLE"
+
+                              android:textColor="@android:color/white" android:textSize="25dp"/>
+                </RelativeLayout>
+
+
             </RelativeLayout>
-
-
-        </RelativeLayout>
 
             <LinearLayout
                     android:layout_width="match_parent"
@@ -71,7 +70,7 @@
             <LinearLayout
 
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="15dp">
+                    android:layout_height="wrap_content" android:orientation="vertical">
                 <TextView
                         android:text="Description"
                         android:layout_width="wrap_content"
@@ -123,6 +122,28 @@
                         android:orientation="horizontal"
 
                         android:id="@+id/rView21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView
+                        android:text="Trailer"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_height="30dp" android:id="@+id/textView6"
+                        android:textSize="22sp" android:layout_marginLeft="10sp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+
+                        android:id="@+id/rView22"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 

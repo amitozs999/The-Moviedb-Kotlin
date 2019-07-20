@@ -121,6 +121,33 @@ class activity_second : AppCompatActivity() {
         })
 
 
+        service.getvideos(id,api_key).enqueue(object : Callback<videoresponse> {
+            override fun onFailure(call: Call<videoresponse>, t: Throwable) {
+                Log.d("MoviesDagger", t.toString())
+            }
+
+
+
+
+            override fun onResponse(call: Call<videoresponse>, response: Response<videoresponse>) {
+
+                val data=response.body()
+                val data1= data?.results
+
+
+                //  rView.layoutManager =
+                //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
+
+                rView22.layoutManager =
+                    LinearLayoutManager(this@activity_second, RecyclerView.HORIZONTAL,false)
+                rView22.adapter = data1?.let { videoadapter(this@activity_second, it,false) }
+
+
+
+            }
+        })
+
+
     }
 
 

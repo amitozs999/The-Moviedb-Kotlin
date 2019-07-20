@@ -63,6 +63,13 @@ interface popinterface {
         @Query("api_key") key: String
     ):Call<movieresponse>
 
+    @GET("3/movie/{id}/videos")
+    fun getvideos(
+        @Path("id") id:Int,
+        @Query("api_key") key: String
+
+    ):Call<videoresponse>
+
 
 
 
