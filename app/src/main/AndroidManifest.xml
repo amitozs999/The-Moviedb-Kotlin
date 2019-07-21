@@ -42,6 +42,14 @@
                     android:value=".MovieActivites.MainActivity"/>
         </activity>
         <activity
+                android:name=".viewallacttv"
+                android:screenOrientation="portrait"
+                android:theme="@style/noAnimTheme">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivitytv"/>
+        </activity>
+        <activity
                 android:name=".MovieActivites.MainActivity"
                 android:theme="@style/noAnimTheme">
             <intent-filter>

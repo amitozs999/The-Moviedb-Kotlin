@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.popularmovies.Model.movieresponse
 import com.example.popularmovies.Model.tvresponse
 import com.example.popularmovies.MovieActivites.MainActivity
+import com.example.popularmovies.MovieActivites.viewallact
 import com.example.popularmovies.Network.popinterface
 import com.example.popularmovies.movieadapters.movieadapter
 import com.example.popularmovies.tvadapters.tvadapter
@@ -64,6 +65,49 @@ class MainActivitytv : AppCompatActivity() {
 
 
         val service=retrofit.create(popinterface::class.java)
+
+        text10tv.setOnClickListener {
+
+
+            val intent= Intent(this, viewallacttv::class.java)
+
+            intent.putExtra("type","Popular")
+            startActivity(intent,null)
+
+        }
+
+
+        text00tv.setOnClickListener {
+
+
+            val intent= Intent(this, viewallacttv::class.java)
+
+            intent.putExtra("type","airingtoday")
+            startActivity(intent,null)
+
+
+        }
+        text20tv.setOnClickListener {
+
+
+            val intent= Intent(this, viewallacttv::class.java)
+
+            intent.putExtra("type","Toprated")
+            startActivity(intent,null)
+
+
+        }
+
+        text30tv.setOnClickListener {
+
+
+            val intent= Intent(this, viewallacttv::class.java)
+
+            intent.putExtra("type","ontheair")
+            startActivity(intent,null)
+
+
+        }
 
         service.getairingtoday(api_key,language).enqueue(object : Callback<tvresponse> {
             override fun onFailure(call: Call<tvresponse>, t: Throwable) {

@@ -81,6 +81,13 @@ interface popinterface {
         // @Query("page") page : String
     ) : Call<tvresponse>
 
+    @GET("3/tv/airing_today")
+    fun getairingtodayall(
+        @Query("api_key") key : String
+
+        // @Query("page") page : String
+    ) : Call<tvresponse>
+
 
     @GET("3/tv/popular")
     fun getpopulartv(
