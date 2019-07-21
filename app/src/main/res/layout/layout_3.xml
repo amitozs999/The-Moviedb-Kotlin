@@ -7,7 +7,7 @@
         android:elevation="10dp"
         android:id="@+id/parentLayout"
         android:layout_width="140dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" app:cardCornerRadius="10dp">
 
     <LinearLayout
             android:orientation="vertical"

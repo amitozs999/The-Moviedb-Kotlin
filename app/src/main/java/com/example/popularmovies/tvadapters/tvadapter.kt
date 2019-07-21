@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.layout_1.view.*
 
 class tvadapter(val context: Context, val namelist:List<tv>, val check:Boolean): RecyclerView.Adapter<tvadapter.myviewholder>() {
 
-    val baseURL = "https://image.tmdb.org/t/p/w780/"
+    val baseURL = "https://image.tmdb.org/t/p/w1280/"
     class myviewholder(itemView: View): RecyclerView.ViewHolder(itemView)
 
     override fun getItemCount(): Int {
@@ -44,7 +44,7 @@ class tvadapter(val context: Context, val namelist:List<tv>, val check:Boolean):
         val item1= this.namelist[position]
         holder.itemView.ltView.text=item1.original_name
         val target=item1.backdrop_path
-        Picasso.get().load(baseURL+target).into(holder.itemView.liView)
+        Picasso.get().load(baseURL+target).resize(330,200).into(holder.itemView.liView)
         holder.itemView.parentLayout.setOnClickListener {
 
             val intent= Intent(context, MainActivitytv2::class.java)
