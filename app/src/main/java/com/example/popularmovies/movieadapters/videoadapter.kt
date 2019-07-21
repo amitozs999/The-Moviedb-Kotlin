@@ -1,4 +1,4 @@
-package com.example.popularmovies
+package com.example.popularmovies.movieadapters
 
 import android.content.Context
 import android.content.Intent
@@ -7,11 +7,11 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.popularmovies.R
+import com.example.popularmovies.Model.video
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.layout_1.view.*
 import kotlinx.android.synthetic.main.layout_5.view.*
 
 class videoadapter(val context: Context, val namelist:List<video>, val check:Boolean): RecyclerView.Adapter<videoadapter.myviewholder>() {

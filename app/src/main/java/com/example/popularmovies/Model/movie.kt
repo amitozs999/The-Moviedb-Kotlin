@@ -1,4 +1,4 @@
-package com.example.popularmovies
+package com.example.popularmovies.Model
 
 data class movieresponse(
     val page : String,

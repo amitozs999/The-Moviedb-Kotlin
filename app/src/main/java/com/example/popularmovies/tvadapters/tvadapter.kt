@@ -1,4 +1,4 @@
-package com.example.popularmovies
+package com.example.popularmovies.tvadapters
 
 import android.content.Context
 import android.content.Intent
@@ -7,12 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.popularmovies.Model.movie
+import com.example.popularmovies.Model.tv
+import com.example.popularmovies.MovieActivites.activity_second
+import com.example.popularmovies.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.layout_1.view.*
-import kotlinx.android.synthetic.main.layout_1.view.parentLayout
-import kotlinx.android.synthetic.main.layout_3.view.*
 
-class moviecastdapter(val context: Context, val namelist:List<moviecast>, val check:Boolean): RecyclerView.Adapter<moviecastdapter.myviewholder>() {
+class tvadapter(val context: Context, val namelist:List<tv>, val check:Boolean): RecyclerView.Adapter<tvadapter.myviewholder>() {
 
     val baseURL = "https://image.tmdb.org/t/p/w342/"
     class myviewholder(itemView: View): RecyclerView.ViewHolder(itemView)
@@ -30,7 +32,7 @@ class moviecastdapter(val context: Context, val namelist:List<moviecast>, val ch
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myviewholder {
 
         var li=parent.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val itemView=li.inflate(R.layout.layout_3,parent,false)
+        val itemView=li.inflate(R.layout.layout_1,parent,false)
         return myviewholder(itemView)
 
     }
@@ -38,29 +40,17 @@ class moviecastdapter(val context: Context, val namelist:List<moviecast>, val ch
     override fun onBindViewHolder(holder: myviewholder, position: Int) {
 
         val item1= this.namelist[position]
-        if(item1.name!=null)
-        {
-        holder.itemView.castname.text=item1.name
+        holder.itemView.ltView.text=item1.original_name
+        val target=item1.poster_path
+        Picasso.get().load(baseURL+target).into(holder.itemView.liView)
 
-            val target=item1.profile_path
-            Picasso.get().load(baseURL+target).resize(140,120).into(holder.itemView.castimage)}
+        holder.itemView.parentLayout.setOnClickListener {
 
-        else
-        {
-            holder.itemView.castname.text=" "
-
+            val intent= Intent(context, activity_second::class.java)
+            intent.putExtra("id",item1.id)
+            intent.putExtra("type","Movie")
+            ContextCompat.startActivity(context, intent, null)
         }
-
-
-
-
-//        holder.itemView.parentLayout.setOnClickListener {
-//
-//            val intent= Intent(context,activity_second::class.java)
-//            intent.putExtra("id",item1.id)
-//            intent.putExtra("type","Movie")
-//            ContextCompat.startActivity(context, intent, null)
-//        }
 
     }
 

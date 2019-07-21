@@ -1,14 +1,13 @@
-package com.example.popularmovies
+package com.example.popularmovies.MovieActivites
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_second.*
+import com.example.popularmovies.Model.movieresponse
+import com.example.popularmovies.Network.popinterface
+import com.example.popularmovies.R
+import com.example.popularmovies.movieadapters.viewalladapter
 import kotlinx.android.synthetic.main.activity_viewallact.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -51,7 +50,13 @@ class viewallact : AppCompatActivity() {
 
                     rViewall.layoutManager =
                         GridLayoutManager(this@viewallact, 2)
-                    rViewall.adapter = data1?.let { viewalladapter(this@viewallact, it,false) }
+                    rViewall.adapter = data1?.let {
+                        viewalladapter(
+                            this@viewallact,
+                            it,
+                            false
+                        )
+                    }
 
 
 
@@ -80,7 +85,13 @@ class viewallact : AppCompatActivity() {
 
                     rViewall.layoutManager =
                         GridLayoutManager(this@viewallact, 2)
-                    rViewall.adapter = data1?.let { viewalladapter(this@viewallact, it,false) }
+                    rViewall.adapter = data1?.let {
+                        viewalladapter(
+                            this@viewallact,
+                            it,
+                            false
+                        )
+                    }
 
 
 
@@ -109,7 +120,13 @@ class viewallact : AppCompatActivity() {
 
                     rViewall.layoutManager =
                         GridLayoutManager(this@viewallact, 2)
-                    rViewall.adapter = data1?.let { viewalladapter(this@viewallact, it,false) }
+                    rViewall.adapter = data1?.let {
+                        viewalladapter(
+                            this@viewallact,
+                            it,
+                            false
+                        )
+                    }
 
 
 
@@ -138,7 +155,13 @@ class viewallact : AppCompatActivity() {
 
                     rViewall.layoutManager =
                         GridLayoutManager(this@viewallact, 2)
-                    rViewall.adapter = data1?.let { viewalladapter(this@viewallact, it,false) }
+                    rViewall.adapter = data1?.let {
+                        viewalladapter(
+                            this@viewallact,
+                            it,
+                            false
+                        )
+                    }
 
 
 

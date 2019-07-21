@@ -1,4 +1,4 @@
-package com.example.popularmovies
+package com.example.popularmovies.Model
 
 data class imageresponse(
     val id : Int,

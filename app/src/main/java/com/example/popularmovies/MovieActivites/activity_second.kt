@@ -1,18 +1,21 @@
-package com.example.popularmovies
+package com.example.popularmovies.MovieActivites
 
-import android.graphics.Color
-import android.graphics.PorterDuff
-import android.graphics.PorterDuffColorFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.popularmovies.Model.movie_search
+import com.example.popularmovies.Model.moviecastresopnse
+import com.example.popularmovies.Model.movieresponse
+import com.example.popularmovies.Model.videoresponse
+import com.example.popularmovies.Network.popinterface
+import com.example.popularmovies.R
+import com.example.popularmovies.movieadapters.movieadapter
+import com.example.popularmovies.movieadapters.moviecastdapter
+import com.example.popularmovies.movieadapters.videoadapter
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_second.*
-import kotlinx.android.synthetic.main.activity_second.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -87,7 +90,13 @@ class activity_second : AppCompatActivity() {
 
                 rView20.layoutManager =
                     LinearLayoutManager(this@activity_second, RecyclerView.HORIZONTAL,false)
-                rView20.adapter = data1?.let { moviecastdapter(this@activity_second, it,false) }
+                rView20.adapter = data1?.let {
+                    moviecastdapter(
+                        this@activity_second,
+                        it,
+                        false
+                    )
+                }
 
 
 
@@ -113,7 +122,13 @@ class activity_second : AppCompatActivity() {
 
                 rView21.layoutManager =
                     LinearLayoutManager(this@activity_second, RecyclerView.HORIZONTAL,false)
-                rView21.adapter = data1?.let { movieadapter(this@activity_second, it,false) }
+                rView21.adapter = data1?.let {
+                    movieadapter(
+                        this@activity_second,
+                        it,
+                        false
+                    )
+                }
 
 
 
@@ -140,7 +155,13 @@ class activity_second : AppCompatActivity() {
 
                 rView22.layoutManager =
                     LinearLayoutManager(this@activity_second, RecyclerView.HORIZONTAL,false)
-                rView22.adapter = data1?.let { videoadapter(this@activity_second, it,false) }
+                rView22.adapter = data1?.let {
+                    videoadapter(
+                        this@activity_second,
+                        it,
+                        false
+                    )
+                }
 
 
 

@@ -13,28 +13,28 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".viewallact"
+        <activity android:name=".MovieActivites.viewallact"
                   android:theme="@style/noAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".MainActivity"/>
+                    android:value=".MovieActivites.MainActivity"/>
         </activity>
         <activity android:name=".Activity_5">
         </activity>
         <activity
-                android:name=".Activity3"
+                android:name=".MainActivitytv"
                 android:theme="@style/noAnimTheme">
         </activity>
         <activity
-                android:name=".activity_second"
+                android:name=".MovieActivites.activity_second"
                 android:screenOrientation="portrait"
                 android:theme="@style/noAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".MainActivity"/>
+                    android:value=".MovieActivites.MainActivity"/>
         </activity>
         <activity
-                android:name=".MainActivity"
+                android:name=".MovieActivites.MainActivity"
                 android:theme="@style/noAnimTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

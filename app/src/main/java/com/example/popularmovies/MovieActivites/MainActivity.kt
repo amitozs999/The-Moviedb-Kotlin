@@ -1,18 +1,20 @@
-package com.example.popularmovies
+package com.example.popularmovies.MovieActivites
 
 
-import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import androidx.appcompat.app.ActionBar
-import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.bottomnavigation.BottomNavigationItemView
+
+import com.example.popularmovies.MainActivitytv
+import com.example.popularmovies.Model.movieresponse
+import com.example.popularmovies.Network.popinterface
+import com.example.popularmovies.R
+import com.example.popularmovies.movieadapters.movieadapter
+import com.example.popularmovies.movieadapters.upmovieadapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
@@ -42,12 +44,12 @@ class MainActivity : AppCompatActivity() {
         naview.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.movies -> {
-                    val  intent1=Intent(this,MainActivity::class.java)
+                    val  intent1=Intent(this, MainActivity::class.java)
                     startActivity(intent1)
                     return@setOnNavigationItemSelectedListener  true
                 }
                 R.id.tv -> {
-                    val  intent2=Intent(this,Activity3::class.java)
+                    val  intent2=Intent(this, MainActivitytv::class.java)
                     startActivity(intent2)
                     return@setOnNavigationItemSelectedListener  true
                 }
@@ -78,7 +80,7 @@ class MainActivity : AppCompatActivity() {
             text10.setOnClickListener {
 
 
-                val intent= Intent(this,viewallact::class.java)
+                val intent= Intent(this, viewallact::class.java)
 
                 intent.putExtra("type","Popular")
                startActivity(intent,null)
@@ -89,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         text00.setOnClickListener {
 
 
-            val intent= Intent(this,viewallact::class.java)
+            val intent= Intent(this, viewallact::class.java)
 
             intent.putExtra("type","Nowplaying")
             startActivity(intent,null)
@@ -99,7 +101,7 @@ class MainActivity : AppCompatActivity() {
         text20.setOnClickListener {
 
 
-            val intent= Intent(this,viewallact::class.java)
+            val intent= Intent(this, viewallact::class.java)
 
             intent.putExtra("type","Toprated")
             startActivity(intent,null)
@@ -107,6 +109,16 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        text30.setOnClickListener {
+
+
+            val intent= Intent(this, viewallact::class.java)
+
+            intent.putExtra("type","Upcoming")
+            startActivity(intent,null)
+
+
+        }
 
 
 
@@ -130,7 +142,13 @@ class MainActivity : AppCompatActivity() {
 
                 rView.layoutManager =
                     LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL,false)
-                rView.adapter = data1?.let { movieadapter(this@MainActivity, it,false) }
+                rView.adapter = data1?.let {
+                    movieadapter(
+                        this@MainActivity,
+                        it,
+                        false
+                    )
+                }
 
 
 
@@ -156,7 +174,13 @@ class MainActivity : AppCompatActivity() {
 
                 rView2.layoutManager =
                     LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL,false)
-                rView2.adapter = data1?.let { movieadapter(this@MainActivity, it,false) }
+                rView2.adapter = data1?.let {
+                    movieadapter(
+                        this@MainActivity,
+                        it,
+                        false
+                    )
+                }
 
 
 
@@ -182,7 +206,13 @@ class MainActivity : AppCompatActivity() {
 
                 rView3.layoutManager =
                     LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL,false)
-                rView3.adapter = data1?.let { movieadapter(this@MainActivity, it,false) }
+                rView3.adapter = data1?.let {
+                    movieadapter(
+                        this@MainActivity,
+                        it,
+                        false
+                    )
+                }
 
 
 
@@ -211,7 +241,13 @@ class MainActivity : AppCompatActivity() {
 
                 rView0.layoutManager =
                     LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL,false)
-                rView0.adapter = data1?.let { upmovieadapter(this@MainActivity, it,false) }
+                rView0.adapter = data1?.let {
+                    upmovieadapter(
+                        this@MainActivity,
+                        it,
+                        false
+                    )
+                }
 
 
 

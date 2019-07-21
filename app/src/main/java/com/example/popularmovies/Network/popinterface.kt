@@ -1,6 +1,7 @@
-package com.example.popularmovies
+package com.example.popularmovies.Network
 
 
+import com.example.popularmovies.Model.*
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -70,6 +71,14 @@ interface popinterface {
 
     ):Call<videoresponse>
 
+
+
+
+    @GET("3/tv/airing_today")
+    fun getairingtoday(
+        @Query("api_key") key : String
+        // @Query("page") page : String
+    ) : Call<tvresponse>
 
 
 
