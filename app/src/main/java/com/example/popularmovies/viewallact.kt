@@ -58,5 +58,94 @@ class viewallact : AppCompatActivity() {
                 }
             })
         }
+        else
+        if(type=="Nowplaying") {
+
+
+            service.getNowplaying(api_key).enqueue(object : Callback<movieresponse> {
+                override fun onFailure(call: Call<movieresponse>, t: Throwable) {
+                    Log.d("MoviesDagger", t.toString())
+                }
+
+
+
+                override fun onResponse(call: Call<movieresponse>, response: Response<movieresponse>) {
+
+                    val data=response.body()
+                    val data1= data?.results
+
+
+                    //  rView.layoutManager =
+                    //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
+
+                    rViewall.layoutManager =
+                        GridLayoutManager(this@viewallact, 2)
+                    rViewall.adapter = data1?.let { viewalladapter(this@viewallact, it,false) }
+
+
+
+                }
+            })
+        }
+        else
+        if(type=="Toprated") {
+
+
+            service.getToprated(api_key).enqueue(object : Callback<movieresponse> {
+                override fun onFailure(call: Call<movieresponse>, t: Throwable) {
+                    Log.d("MoviesDagger", t.toString())
+                }
+
+
+
+                override fun onResponse(call: Call<movieresponse>, response: Response<movieresponse>) {
+
+                    val data=response.body()
+                    val data1= data?.results
+
+
+                    //  rView.layoutManager =
+                    //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
+
+                    rViewall.layoutManager =
+                        GridLayoutManager(this@viewallact, 2)
+                    rViewall.adapter = data1?.let { viewalladapter(this@viewallact, it,false) }
+
+
+
+                }
+            })
+        }
+        else
+        if(type=="Upcoming") {
+
+
+            service.getUpcoming(api_key).enqueue(object : Callback<movieresponse> {
+                override fun onFailure(call: Call<movieresponse>, t: Throwable) {
+                    Log.d("MoviesDagger", t.toString())
+                }
+
+
+
+                override fun onResponse(call: Call<movieresponse>, response: Response<movieresponse>) {
+
+                    val data=response.body()
+                    val data1= data?.results
+
+
+                    //  rView.layoutManager =
+                    //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
+
+                    rViewall.layoutManager =
+                        GridLayoutManager(this@viewallact, 2)
+                    rViewall.adapter = data1?.let { viewalladapter(this@viewallact, it,false) }
+
+
+
+                }
+            })
+        }
+
     }
+
 }

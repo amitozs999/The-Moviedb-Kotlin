@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
         val service=retrofit.create(popinterface::class.java)
 
 
-            text00.setOnClickListener {
+            text10.setOnClickListener {
 
 
                 val intent= Intent(this,viewallact::class.java)
@@ -84,6 +84,29 @@ class MainActivity : AppCompatActivity() {
                startActivity(intent,null)
 
             }
+
+
+        text00.setOnClickListener {
+
+
+            val intent= Intent(this,viewallact::class.java)
+
+            intent.putExtra("type","Nowplaying")
+            startActivity(intent,null)
+
+
+        }
+        text20.setOnClickListener {
+
+
+            val intent= Intent(this,viewallact::class.java)
+
+            intent.putExtra("type","Toprated")
+            startActivity(intent,null)
+
+
+        }
+
 
 
 
