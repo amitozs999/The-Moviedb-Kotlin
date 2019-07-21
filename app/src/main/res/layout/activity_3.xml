@@ -17,6 +17,161 @@
     >
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp" android:paddingLeft="12dp">
+
+
+        <TextView
+
+                android:text="Airing Today"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@android:color/black"
+                android:id="@+id/text0"
+                android:textSize="20sp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                android:layout_marginLeft="12dp"/>
+        <TextView
+
+                android:text="➞"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@android:color/darker_gray"
+                android:id="@+id/text00"
+                android:textSize="20dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                android:layout_marginLeft="355dp"/>
+    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_weight="1"
+            android:orientation="horizontal"
+
+            android:id="@+id/rViewtv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:paddingLeft="12dp">
+
+
+            <TextView
+
+                    android:text="Popular"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/text1"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginLeft="12dp"
+                    android:layout_marginTop="20dp"/>
+            <TextView
+
+                    android:text="➞"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@android:color/darker_gray"
+                    android:id="@+id/text10"
+                    android:textSize="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                    android:layout_marginLeft="355dp"/>
+        </FrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_weight="1"
+                android:orientation="horizontal"
+
+                android:id="@+id/rViewtv2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp" android:paddingLeft="12dp">
+
+
+            <TextView
+
+                    android:text="Top Rated"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/text2"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                    android:layout_marginLeft="12dp"/>
+            <TextView
+
+                    android:text="➞"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@android:color/darker_gray"
+                    android:id="@+id/text20"
+                    android:textSize="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                    android:layout_marginLeft="355dp"/>
+        </FrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_weight="1"
+                android:orientation="horizontal"
+
+                android:id="@+id/rViewtv3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp" android:paddingLeft="12dp">
+
+
+            <TextView
+
+                    android:text="On The Air"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/text3"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                    android:layout_marginLeft="12dp"/>
+            <TextView
+
+                    android:text="➞"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@android:color/darker_gray"
+                    android:id="@+id/text30"
+                    android:textSize="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                    android:layout_marginLeft="355dp"/>
+        </FrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_weight="1"
+                android:orientation="horizontal"
+
+                android:id="@+id/rViewtv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="80dp"
+        ></LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
 </RelativeLayout>
 
 

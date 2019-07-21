@@ -13,8 +13,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MovieActivites.viewallact"
-                  android:theme="@style/noAnimTheme">
+        <activity android:name=".MainActivitytv2">
+        </activity>
+        <activity
+                android:name=".MovieActivites.viewallact"
+                android:theme="@style/noAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MovieActivites.MainActivity"/>
