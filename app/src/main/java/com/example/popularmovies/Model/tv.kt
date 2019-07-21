@@ -15,3 +15,23 @@ data class tv(
     val release_date : String,
     val vote_average : String
 )
+
+data class tvcastresponse(
+    var cast:ArrayList<tvcast>
+)
+data class tvcast(
+    var id : Int,
+    var name : String,
+    var profile_path : String
+
+)
+
+data class videoresponsetv(
+    val results : ArrayList<videotv>
+)
+
+data class videotv(
+    val id: String,
+    val key : String,
+    val name : String
+)

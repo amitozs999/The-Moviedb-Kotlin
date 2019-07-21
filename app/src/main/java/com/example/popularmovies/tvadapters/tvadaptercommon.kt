@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.popularmovies.MainActivitytv2
 import com.example.popularmovies.Model.tv
 import com.example.popularmovies.MovieActivites.activity_second
 import com.example.popularmovies.R
@@ -44,9 +45,9 @@ class tvadaptercommon(val context: Context, val namelist:List<tv>, val check:Boo
         Picasso.get().load(baseURL+target).into(holder.itemView.liView)
         holder.itemView.parentLayout.setOnClickListener {
 
-            val intent= Intent(context, activity_second::class.java)
+            val intent= Intent(context, MainActivitytv2::class.java)
             intent.putExtra("id",item1.id)
-            intent.putExtra("type","Movie")
+            intent.putExtra("type","Tv")
             ContextCompat.startActivity(context, intent, null)
         }
     }

@@ -103,6 +103,33 @@ interface popinterface {
 
 
 
+    @GET("3/tv/{tv_id}}")
+    fun gettv(
+
+        @Path("tv_id") id:Int,
+        @Query("api_key") key: String
+    ) :Call<tv>
+
+    @GET("3/tv/{id}/credits")
+    fun gettvcast(
+
+        @Path("id") id:Int,
+        @Query("api_key") key: String
+    ) :Call<tvcastresponse>
+
+    @GET("3/tv/{tv_id}/similar")
+    fun getsimilartv(
+
+        @Path("tv_id") tvid:Int,
+        @Query("api_key") key: String
+    ):Call<tvresponse>
+
+    @GET("3/tv/{id}/videos")
+    fun getvideostv(
+        @Path("id") id:Int,
+        @Query("api_key") key: String
+
+    ):Call<videoresponsetv>
 
 
 }
