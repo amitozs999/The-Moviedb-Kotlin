@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
          var menu = naview.menu
         var menuItem = menu.getItem(0)
         menuItem.isChecked = true
+
         naview.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.movies -> {

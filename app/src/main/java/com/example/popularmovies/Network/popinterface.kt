@@ -139,4 +139,12 @@ interface popinterface {
     ):Call<videoresponsetv>
 
 
+
+    @GET("3/person/popular")
+    fun getPopularpeople(
+        @Query("api_key") key : String
+        // @Query("page") page : String
+    ) : Call<peopleresponse>
+
+
 }

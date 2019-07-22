@@ -28,11 +28,14 @@
                     android:value=".MovieActivites.MainActivity"/>
         </activity>
         <activity android:name=".MainActivityPeople"
-                  android:theme="@style/noAnimTheme">
+                  android:theme="@style/noAnimTheme"
+                  >
         </activity>
         <activity
                 android:name=".TvActivities.MainActivitytv"
-                android:theme="@style/noAnimTheme">
+                android:theme="@style/noAnimTheme"
+                >
+
         </activity>
         <activity
                 android:name=".MovieActivites.activity_second"
@@ -52,7 +55,8 @@
         </activity>
         <activity
                 android:name=".MovieActivites.MainActivity"
-                android:theme="@style/noAnimTheme">
+                android:theme="@style/noAnimTheme"
+                >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

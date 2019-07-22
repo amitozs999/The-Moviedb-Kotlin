@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:elevation="10dp"
+        android:id="@+id/parentLayout"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:orientation="vertical">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <ImageView
+                    android:src="@drawable/ic_launcher_foreground"
+                    android:layout_gravity="center"
+                    android:background="@android:color/white"
+                    android:id="@+id/liViewpopular"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>
+
+            <TextView
+                    android:gravity="center"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/darker_gray"
+                    android:id="@+id/ltViewpopular"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingLeft="90dp">
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:src="@drawable/ic_star_2"
+                    android:id="@+id/imageButton" android:background="#00F4F8FA"
+            />
+            <TextView android:layout_width="wrap_content" android:layout_height="25dp"
+                      android:textColor="@android:color/black"
+                      android:textStyle="bold"
+                      android:text="TITLE"
+                      android:id="@+id/tvpopularity" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
