@@ -50,7 +50,7 @@ class popularpeopleadapter(val context: Context, val namelist:List<people>, val 
 
         holder.itemView.parentLayout.setOnClickListener {
 
-            val intent= Intent(context, activity_second::class.java)
+            val intent= Intent(context, MainActivityPeople2::class.java)
             intent.putExtra("id",item1.id)
             intent.putExtra("type","People")
             ContextCompat.startActivity(context, intent, null)

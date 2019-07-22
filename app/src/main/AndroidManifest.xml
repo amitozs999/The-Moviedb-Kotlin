@@ -13,12 +13,14 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".TvActivities.MainActivitytv2"
-                  android:theme="@style/noAnimTheme">
+        <activity android:name=".MainActivityPeople2">
+        </activity>
+        <activity
+                android:name=".TvActivities.MainActivitytv2"
+                android:theme="@style/noAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".TvActivities.MainActivitytv"/>
-
         </activity>
         <activity
                 android:name=".MovieActivites.viewallact"
@@ -27,15 +29,13 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MovieActivites.MainActivity"/>
         </activity>
-        <activity android:name=".MainActivityPeople"
-                  android:theme="@style/noAnimTheme"
-                  >
+        <activity
+                android:name=".MainActivityPeople"
+                android:theme="@style/noAnimTheme">
         </activity>
         <activity
                 android:name=".TvActivities.MainActivitytv"
-                android:theme="@style/noAnimTheme"
-                >
-
+                android:theme="@style/noAnimTheme">
         </activity>
         <activity
                 android:name=".MovieActivites.activity_second"
@@ -55,8 +55,7 @@
         </activity>
         <activity
                 android:name=".MovieActivites.MainActivity"
-                android:theme="@style/noAnimTheme"
-                >
+                android:theme="@style/noAnimTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

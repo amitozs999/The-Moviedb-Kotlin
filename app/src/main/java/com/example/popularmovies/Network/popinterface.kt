@@ -147,4 +147,12 @@ interface popinterface {
     ) : Call<peopleresponse>
 
 
+    @GET("3/person/{id}")
+    fun getpeopledetail(
+        @Path("id") id: Number,
+        @Query("api_key") key : String
+        // @Query("page") page : String
+    ) : Call<people>
+
+
 }

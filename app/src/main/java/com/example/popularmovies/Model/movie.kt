@@ -37,7 +37,8 @@ data class moviecastresopnse(
 data class moviecast(
     val cast_id:Int,
     val name: String,
-    val profile_path:String
+    val profile_path:String,
+    var id: String
 )
 data class similarresonse(
     val page:Int=0,
