@@ -1,6 +1,8 @@
 package com.example.popularmovies.MovieActivites
 
 
+import android.app.SearchManager
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,19 +10,26 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.popularmovies.MainActivityPeople
+import com.example.popularmovies.Model.Searchresonse
 
 import com.example.popularmovies.TvActivities.MainActivitytv
 import com.example.popularmovies.Model.movieresponse
 import com.example.popularmovies.Network.popinterface
 import com.example.popularmovies.R
+import com.example.popularmovies.SearchActivity
+import com.example.popularmovies.SearchAdapter
 import com.example.popularmovies.movieadapters.movieadapter
 import com.example.popularmovies.movieadapters.upmovieadapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.seachlayout.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -35,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
+    val service=retrofit.create(popinterface::class.java)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -89,6 +99,30 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater=menuInflater
         inflater.inflate(R.menu.search_menu,menu)
+
+        val manager=getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        val searchitem=menu?.findItem(R.id.searchid)
+        val searchview=searchitem?.actionView as SearchView
+        searchview.setSearchableInfo(manager.getSearchableInfo(componentName))
+        searchview.setOnQueryTextListener(object :SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String): Boolean {
+                searchview.clearFocus()
+                val intent=Intent(this@MainActivity,SearchActivity::class.java)
+                intent.putExtra("text", query)
+                startActivity(intent)
+
+
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+
+
+
+
+                return false
+            }
+        })
         return true
     }
 
@@ -108,27 +142,8 @@ class MainActivity : AppCompatActivity() {
        finish()
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        menuInflater.inflate(R.menu.main, menu)
-//        return true
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        when(item.itemId) {
-//            R.id.search -> {
-//                eTSearch.setText("")
-//                layoutSearch.isVisible = !layoutSearch.isVisible
-//            }
-//        }
-//        return true
-//    }
     fun start()
     {
-        val service=retrofit.create(popinterface::class.java)
 
 
             text10.setOnClickListener {

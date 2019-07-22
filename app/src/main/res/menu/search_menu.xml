@@ -3,6 +3,7 @@
     <item
             android:title="Searchbar"
             android:id="@+id/searchid"
+            app:actionViewClass="androidx.appcompat.widget.SearchView"
             android:icon="@drawable/ic_search_1"
             app:showAsAction="always"/>
 

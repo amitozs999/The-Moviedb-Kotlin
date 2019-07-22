@@ -31,7 +31,7 @@ class SearchAdapter(val context: Context, val namelist:List<Search>, val check:B
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myviewholder {
 
         var li=parent.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val itemView=li.inflate(R.layout.layout_1,parent,false)
+        val itemView=li.inflate(R.layout.seachlayout,parent,false)
         return myviewholder(itemView)
 
     }
