@@ -1,13 +1,13 @@
-package com.example.popularmovies
+package com.example.popularmovies.TvActivities
 
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.popularmovies.Model.movieresponse
 import com.example.popularmovies.Model.tvresponse
 import com.example.popularmovies.Network.popinterface
-import com.example.popularmovies.movieadapters.viewalladapter
+import com.example.popularmovies.R
+import com.example.popularmovies.tvadapters.viewalladaptertv
 import kotlinx.android.synthetic.main.activity_viewallact.*
 import retrofit2.Call
 import retrofit2.Callback

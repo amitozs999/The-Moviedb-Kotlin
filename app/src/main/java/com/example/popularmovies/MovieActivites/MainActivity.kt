@@ -8,8 +8,9 @@ import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.popularmovies.MainActivityPeople
 
-import com.example.popularmovies.MainActivitytv
+import com.example.popularmovies.TvActivities.MainActivitytv
 import com.example.popularmovies.Model.movieresponse
 import com.example.popularmovies.Network.popinterface
 import com.example.popularmovies.R
@@ -51,6 +52,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.tv -> {
                     val  intent2=Intent(this, MainActivitytv::class.java)
                     startActivity(intent2)
+                    return@setOnNavigationItemSelectedListener  true
+                }
+                R.id.person -> {
+                    val  intent3=Intent(this, MainActivityPeople::class.java)
+                    startActivity(intent3)
                     return@setOnNavigationItemSelectedListener  true
                 }
                 else-> return@setOnNavigationItemSelectedListener  true

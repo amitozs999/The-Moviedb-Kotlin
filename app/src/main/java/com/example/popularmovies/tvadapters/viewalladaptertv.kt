@@ -1,12 +1,12 @@
-package com.example.popularmovies
+package com.example.popularmovies.tvadapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.popularmovies.Model.movie
 import com.example.popularmovies.Model.tv
+import com.example.popularmovies.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.layout_1.view.*
 

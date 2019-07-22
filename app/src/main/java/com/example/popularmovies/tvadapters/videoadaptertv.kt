@@ -1,4 +1,4 @@
-package com.example.popularmovies
+package com.example.popularmovies.tvadapters
 
 import android.content.Context
 import android.content.Intent
@@ -9,8 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.example.popularmovies.Model.video
 import com.example.popularmovies.Model.videotv
+import com.example.popularmovies.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.layout_5.view.*
 

@@ -1,4 +1,4 @@
-package com.example.popularmovies
+package com.example.popularmovies.TvActivities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,18 +7,15 @@ import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.popularmovies.Model.movieresponse
+import com.example.popularmovies.MainActivityPeople
 import com.example.popularmovies.Model.tvresponse
 import com.example.popularmovies.MovieActivites.MainActivity
-import com.example.popularmovies.MovieActivites.viewallact
 import com.example.popularmovies.Network.popinterface
-import com.example.popularmovies.movieadapters.movieadapter
+import com.example.popularmovies.R
 import com.example.popularmovies.tvadapters.tvadapter
 import com.example.popularmovies.tvadapters.tvadaptercommon
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_3.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.rView3
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -48,6 +45,17 @@ class MainActivitytv : AppCompatActivity() {
                 R.id.movies -> {
                     val  intent1= Intent(this, MainActivity::class.java)
                     startActivity(intent1)
+                    return@setOnNavigationItemSelectedListener  true
+                }
+                R.id.tv -> {
+                    val  intent2=Intent(this, MainActivitytv::class.java)
+                    startActivity(intent2)
+                    return@setOnNavigationItemSelectedListener  true
+                }
+
+                R.id.person -> {
+                    val  intent3=Intent(this, MainActivityPeople::class.java)
+                    startActivity(intent3)
                     return@setOnNavigationItemSelectedListener  true
                 }
 

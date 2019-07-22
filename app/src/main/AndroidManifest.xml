@@ -13,11 +13,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivitytv2"
+        <activity android:name=".TvActivities.MainActivitytv2"
                   android:theme="@style/noAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".MainActivitytv"/>
+                    android:value=".TvActivities.MainActivitytv"/>
 
         </activity>
         <activity
@@ -27,10 +27,11 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MovieActivites.MainActivity"/>
         </activity>
-        <activity android:name=".Activity_5">
+        <activity android:name=".MainActivityPeople"
+                  android:theme="@style/noAnimTheme">
         </activity>
         <activity
-                android:name=".MainActivitytv"
+                android:name=".TvActivities.MainActivitytv"
                 android:theme="@style/noAnimTheme">
         </activity>
         <activity
@@ -42,12 +43,12 @@
                     android:value=".MovieActivites.MainActivity"/>
         </activity>
         <activity
-                android:name=".viewallacttv"
+                android:name=".TvActivities.viewallacttv"
                 android:screenOrientation="portrait"
                 android:theme="@style/noAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".MainActivitytv"/>
+                    android:value=".TvActivities.MainActivitytv"/>
         </activity>
         <activity
                 android:name=".MovieActivites.MainActivity"

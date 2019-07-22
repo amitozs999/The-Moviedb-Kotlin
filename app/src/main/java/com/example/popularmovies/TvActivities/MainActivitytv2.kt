@@ -1,4 +1,4 @@
-package com.example.popularmovies
+package com.example.popularmovies.TvActivities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,14 +7,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.popularmovies.Model.*
 import com.example.popularmovies.Network.popinterface
-import com.example.popularmovies.movieadapters.movieadapter
-import com.example.popularmovies.movieadapters.moviecastdapter
-import com.example.popularmovies.movieadapters.videoadapter
+import com.example.popularmovies.R
 import com.example.popularmovies.tvadapters.tvadaptercommon
 import com.example.popularmovies.tvadapters.tvcastdapter
+import com.example.popularmovies.tvadapters.videoadaptertv
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_4.*
-import kotlinx.android.synthetic.main.activity_second.*
 import kotlinx.android.synthetic.main.activity_second.imageview2
 import kotlinx.android.synthetic.main.activity_second.iview
 import kotlinx.android.synthetic.main.activity_second.tv1
