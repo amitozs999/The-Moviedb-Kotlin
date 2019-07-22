@@ -68,6 +68,11 @@ class MainActivitytv : AppCompatActivity() {
          start()
 
     }
+    override fun onBackPressed() {
+        val i=Intent(this,MainActivity::class.java)
+        startActivity(i)
+        finishAffinity()
+    }
     fun start()
     {
 

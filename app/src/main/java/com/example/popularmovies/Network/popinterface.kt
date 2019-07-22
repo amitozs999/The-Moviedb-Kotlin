@@ -155,4 +155,11 @@ interface popinterface {
     ) : Call<people>
 
 
+    @GET("3/search/multi")
+    fun getSearch(
+        @Query("api_key") key : String,
+        @Query("query") query : String
+    ) : Call<Searchresonse>
+
+
 }
