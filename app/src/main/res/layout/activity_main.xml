@@ -21,17 +21,13 @@
         android:layout_height="match_parent" android:layout_width="match_parent">
 
 
-<com.google.android.material.bottomnavigation.BottomNavigationView android:layout_width="match_parent"
-                                                                   android:layout_height="60dp"
-
-android:id="@+id/nav"
-
-
-                                                                   android:layout_alignParentBottom="true"
-                                                                   android:background="@android:color/background_light"
-                                                                   app:menu="@menu/main_menu"
-
->
+<com.google.android.material.bottomnavigation.BottomNavigationView
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:id="@+id/nav"
+                                android:layout_alignParentBottom="true"
+                                android:background="@android:color/background_light"
+                                app:menu="@menu/main_menu">
 
 </com.google.android.material.bottomnavigation.BottomNavigationView>
 

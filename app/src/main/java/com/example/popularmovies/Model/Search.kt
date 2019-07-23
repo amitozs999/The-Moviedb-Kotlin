@@ -11,5 +11,6 @@ data class Search(
     val name : String,
     val original_title : String,
     val media_type : String,
-    val id : String
+    val id : String,
+    var original_name: String
 )

@@ -100,15 +100,23 @@ class MainActivity : AppCompatActivity() {
         val inflater=menuInflater
         inflater.inflate(R.menu.search_menu,menu)
 
-        val manager=getSystemService(Context.SEARCH_SERVICE) as SearchManager
-        val searchitem=menu?.findItem(R.id.searchid)
-        val searchview=searchitem?.actionView as SearchView
+        var manager=getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        var searchitem=menu?.findItem(R.id.searchid)
+        var searchview=searchitem?.actionView as SearchView
         searchview.setSearchableInfo(manager.getSearchableInfo(componentName))
         searchview.setOnQueryTextListener(object :SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String): Boolean {
-                searchview.clearFocus()
+                //searchview.clearFocus()
+//                searchview.setQuery(" ",false)
+                searchview.queryHint="Search Movies Here..."
+
+
+
+//                searchview.setIconifiedByDefault(false)
+                //searchview.isIconified=false
                 val intent=Intent(this@MainActivity,SearchActivity::class.java)
                 intent.putExtra("text", query)
+                intent.putExtra("type","movie")
                 startActivity(intent)
 
 

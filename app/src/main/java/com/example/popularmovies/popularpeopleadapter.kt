@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.peoplelayout.view.*
 
 class popularpeopleadapter(val context: Context, val namelist:List<people>, val check:Boolean): RecyclerView.Adapter<popularpeopleadapter.myviewholder>() {
 
-    val baseURL = "https://image.tmdb.org/t/p/h632/"
+    val baseURL = "https://image.tmdb.org/t/p/original/"
     class myviewholder(itemView: View): RecyclerView.ViewHolder(itemView)
 
     override fun getItemCount(): Int {

@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.popularmovies.Model.Search
 import com.example.popularmovies.Model.tv
+import com.example.popularmovies.MovieActivites.activity_second
 import com.example.popularmovies.TvActivities.MainActivitytv2
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.layout_1.view.*
@@ -40,17 +41,12 @@ class SearchAdapter(val context: Context, val namelist:List<Search>, val check:B
         val item1= this.namelist[position]
 
 
-        if(item1.original_title!=null) {
             holder.itemView.ltView.text = item1.original_title
-        } else {
-            holder.itemView.ltView.text = item1.name
-        }
+
         var target : String
-        if(item1.poster_path!=null) {
+
             target = item1.poster_path
-        } else {
-            target = item1.profile_path
-        }
+
         Picasso.get().load(baseURL + target).into(holder.itemView.liView)
 
 
@@ -58,9 +54,9 @@ class SearchAdapter(val context: Context, val namelist:List<Search>, val check:B
 
         holder.itemView.parentLayout.setOnClickListener {
 
-            val intent= Intent(context, MainActivitytv2::class.java)
+            val intent= Intent(context, activity_second::class.java)
             intent.putExtra("id",item1.id)
-            intent.putExtra("type","Tv")
+            intent.putExtra("type","movie")
             ContextCompat.startActivity(context, intent, null)
         }
     }

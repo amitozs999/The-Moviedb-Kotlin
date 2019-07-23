@@ -27,38 +27,109 @@ class SearchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
-        val type = intent.getStringExtra("text")
+        val query = intent.getStringExtra("text")
+        val type = intent.getStringExtra("type")
 
 
-        service.getSearch(api_key,type).enqueue(object : Callback<Searchresonse> {
-            override fun onFailure(call: Call<Searchresonse>, t: Throwable) {
-                Log.d("MoviesDagger", t.toString())
-            }
+        if (type=="people") {
 
 
-
-            override fun onResponse(call: Call<Searchresonse>, response: Response<Searchresonse>) {
-
-                val data=response.body()
-                val data1= data?.results
-
-
-                //  rView.layoutManager =
-                //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
-
-                rViewnew.layoutManager =
-                    GridLayoutManager(this@SearchActivity,2, RecyclerView.VERTICAL,false)
-                rViewnew.adapter = data1?.let {
-                    SearchAdapter(
-                        this@SearchActivity,
-                        it,
-                        false
-                    )
+            service.getSearchPeople(api_key, query).enqueue(object : Callback<Searchresonse> {
+                override fun onFailure(call: Call<Searchresonse>, t: Throwable) {
+                    Log.d("MoviesDagger", t.toString())
                 }
 
 
+                override fun onResponse(call: Call<Searchresonse>, response: Response<Searchresonse>) {
+
+                    val data = response.body()
+                    val data1 = data?.results
+
+
+                    //  rView.layoutManager =
+                    //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
+
+                    rViewnew.layoutManager =
+                        GridLayoutManager(this@SearchActivity, 2, RecyclerView.VERTICAL, false)
+                    rViewnew.adapter = data1?.let {
+                        SearchAdapterPeople(
+                            this@SearchActivity,
+                            it,
+                            false
+                        )
+                    }
+
+
+                }
+            })
+
+        }
+        else
+            if(type=="movie")
+            {
+                service.getSearchMovie(api_key, query).enqueue(object : Callback<Searchresonse> {
+                    override fun onFailure(call: Call<Searchresonse>, t: Throwable) {
+                        Log.d("MoviesDagger", t.toString())
+                    }
+
+
+                    override fun onResponse(call: Call<Searchresonse>, response: Response<Searchresonse>) {
+
+                        val data = response.body()
+                        val data1 = data?.results
+
+
+                        //  rView.layoutManager =
+                        //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
+
+                        rViewnew.layoutManager =
+                            GridLayoutManager(this@SearchActivity, 2, RecyclerView.VERTICAL, false)
+                        rViewnew.adapter = data1?.let {
+                            SearchAdapter(
+                                this@SearchActivity,
+                                it,
+                                false
+                            )
+                        }
+
+
+                    }
+                })
+
+
+
+
 
             }
-        })
+        else{
+                service.getSearchTv(api_key, query).enqueue(object : Callback<Searchresonse> {
+                    override fun onFailure(call: Call<Searchresonse>, t: Throwable) {
+                        Log.d("MoviesDagger", t.toString())
+                    }
+
+
+                    override fun onResponse(call: Call<Searchresonse>, response: Response<Searchresonse>) {
+
+                        val data = response.body()
+                        val data1 = data?.results
+
+
+                        //  rView.layoutManager =
+                        //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
+
+                        rViewnew.layoutManager =
+                            GridLayoutManager(this@SearchActivity, 2, RecyclerView.VERTICAL, false)
+                        rViewnew.adapter = data1?.let {
+                            SearchAdapterTv(
+                                this@SearchActivity,
+                                it,
+                                false
+                            )
+                        }
+
+
+                    }
+                })
+            }
     }
 }

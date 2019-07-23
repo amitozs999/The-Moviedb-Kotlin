@@ -1,12 +1,15 @@
 package com.example.popularmovies.movieadapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.popularmovies.R
 import com.example.popularmovies.Model.movie
+import com.example.popularmovies.MovieActivites.activity_second
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.layout_1.view.*
 
@@ -40,13 +43,13 @@ class viewalladapter(val context: Context, val namelist:List<movie>, val check:B
         val target=item1.poster_path
         Picasso.get().load(baseURL+target).resize(180,210).into(holder.itemView.liView)
 
-//        holder.itemView.parentLayout.setOnClickListener {
-//
-//            val intent= Intent(context,viewallact::class.java)
-//            intent.putExtra("id",item1.id)
-//            intent.putExtra("type","Movie")
-//            ContextCompat.startActivity(context, intent, null)
-//        }
+        holder.itemView.parentLayout.setOnClickListener {
+
+            val intent= Intent(context,activity_second::class.java)
+            intent.putExtra("id",item1.id)
+            intent.putExtra("type","Movie")
+            ContextCompat.startActivity(context, intent, null)
+        }
 
     }
 

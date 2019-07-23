@@ -1,10 +1,16 @@
 package com.example.popularmovies
 
+import android.app.SearchManager
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -30,13 +36,18 @@ class MainActivityPeople : AppCompatActivity() {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    lateinit var toolbar: android.app.ActionBar
+    val service=retrofit.create(popinterface::class.java)
     var language:String="en"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_5)
-        var toolbar = supportActionBar
+
+
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+
         val naview=findViewById<View>(R.id.nav) as? BottomNavigationView
         var menu = naview?.menu
         var menuItem = menu?.getItem(2)
@@ -68,6 +79,57 @@ class MainActivityPeople : AppCompatActivity() {
 
         start()
     }
+
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater=menuInflater
+        inflater.inflate(R.menu.search_menu,menu)
+
+        var manager=getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        var searchitem=menu?.findItem(R.id.searchid)
+        var searchview=searchitem?.actionView as SearchView
+        searchview.setSearchableInfo(manager.getSearchableInfo(componentName))
+        searchview.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String): Boolean {
+                //searchview.clearFocus()
+//                searchview.setQuery(" ",false)
+                searchview.queryHint="Search People Here..."
+
+
+
+//                searchview.setIconifiedByDefault(false)
+                //searchview.isIconified=false
+                val intent=Intent(this@MainActivityPeople, SearchActivity::class.java)
+                intent.putExtra("text", query)
+                intent.putExtra("type","people")
+                startActivity(intent)
+
+
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+
+
+
+
+                return false
+            }
+        })
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId)
+        {
+            R.id.searchid->{
+                return true
+            }
+            else-> super.onOptionsItemSelected(item)
+        }
+        return true
+    }
+
     override fun onBackPressed() {
         val i=Intent(this,MainActivity::class.java)
         startActivity(i)

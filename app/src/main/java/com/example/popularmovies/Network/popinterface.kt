@@ -155,8 +155,20 @@ interface popinterface {
     ) : Call<people>
 
 
-    @GET("3/search/multi")
-    fun getSearch(
+    @GET("3/search/person")
+    fun getSearchPeople(
+        @Query("api_key") key : String,
+        @Query("query") query : String
+    ) : Call<Searchresonse>
+
+    @GET("3/search/movie")
+    fun getSearchMovie(
+        @Query("api_key") key : String,
+        @Query("query") query : String
+    ) : Call<Searchresonse>
+
+    @GET("3/search/tv")
+    fun getSearchTv(
         @Query("api_key") key : String,
         @Query("query") query : String
     ) : Call<Searchresonse>

@@ -15,34 +15,35 @@
             tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".SearchActivity">
         </activity>
-        <activity android:name=".MainActivityPeople2">
+        <activity android:name=".MainActivityPeople2"
+                  android:theme="@style/NoAnimTheme">
         </activity>
         <activity
                 android:name=".TvActivities.MainActivitytv2"
-                android:theme="@style/noAnimTheme">
+                android:theme="@style/NoAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".TvActivities.MainActivitytv"/>
         </activity>
         <activity
                 android:name=".MovieActivites.viewallact"
-                android:theme="@style/noAnimTheme">
+                android:theme="@style/NoAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MovieActivites.MainActivity"/>
         </activity>
         <activity
                 android:name=".MainActivityPeople"
-                android:theme="@style/noAnimTheme">
+                android:theme="@style/AppTheme">
         </activity>
         <activity
                 android:name=".TvActivities.MainActivitytv"
-                android:theme="@style/noAnimTheme">
+                android:theme="@style/AppTheme">
         </activity>
         <activity
                 android:name=".MovieActivites.activity_second"
                 android:screenOrientation="portrait"
-                android:theme="@style/noAnimTheme">
+                android:theme="@style/NoAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MovieActivites.MainActivity"/>
@@ -50,7 +51,7 @@
         <activity
                 android:name=".TvActivities.viewallacttv"
                 android:screenOrientation="portrait"
-                android:theme="@style/noAnimTheme">
+                android:theme="@style/NoAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".TvActivities.MainActivitytv"/>

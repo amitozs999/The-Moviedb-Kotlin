@@ -1,10 +1,16 @@
 package com.example.popularmovies.TvActivities
 
+import android.app.SearchManager
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.popularmovies.MainActivityPeople
@@ -12,6 +18,7 @@ import com.example.popularmovies.Model.tvresponse
 import com.example.popularmovies.MovieActivites.MainActivity
 import com.example.popularmovies.Network.popinterface
 import com.example.popularmovies.R
+import com.example.popularmovies.SearchActivity
 import com.example.popularmovies.tvadapters.tvadapter
 import com.example.popularmovies.tvadapters.tvadaptercommon
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -29,13 +36,19 @@ class MainActivitytv : AppCompatActivity() {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    lateinit var toolbar: android.app.ActionBar
+    val service=retrofit.create(popinterface::class.java)
+
+
     var language:String="en"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_3)
-        var toolbar = supportActionBar
+
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+
         val naview=findViewById<View>(R.id.nav) as BottomNavigationView
         var menu = naview.menu
         var menuItem = menu.getItem(1)
@@ -68,6 +81,55 @@ class MainActivitytv : AppCompatActivity() {
          start()
 
     }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater=menuInflater
+        inflater.inflate(R.menu.search_menu,menu)
+
+        var manager=getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        var searchitem=menu?.findItem(R.id.searchid)
+        var searchview=searchitem?.actionView as SearchView
+        searchview.setSearchableInfo(manager.getSearchableInfo(componentName))
+        searchview.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String): Boolean {
+                //searchview.clearFocus()
+//                searchview.setQuery(" ",false)
+                searchview.queryHint="Search Tv Shows Here..."
+
+
+
+//                searchview.setIconifiedByDefault(false)
+                //searchview.isIconified=false
+                val intent=Intent(this@MainActivitytv, SearchActivity::class.java)
+                intent.putExtra("text", query)
+                intent.putExtra("type","tv")
+                startActivity(intent)
+
+
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+
+
+
+
+                return false
+            }
+        })
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId)
+        {
+            R.id.searchid->{
+                return true
+            }
+            else-> super.onOptionsItemSelected(item)
+        }
+        return true
+    }
+
     override fun onBackPressed() {
         val i=Intent(this,MainActivity::class.java)
         startActivity(i)
@@ -77,7 +139,6 @@ class MainActivitytv : AppCompatActivity() {
     {
 
 
-        val service=retrofit.create(popinterface::class.java)
 
         text10tv.setOnClickListener {
 

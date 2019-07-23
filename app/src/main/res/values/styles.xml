@@ -8,16 +8,23 @@
         <item name="colorPrimary">#40d2ff</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+
+    <style name="NoAnimTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+       <item name="android:windowAnimationStyle">@null</item>
+    <item name="colorPrimary">#40d2ff</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+
+
+
+
     </style>
 
 
-    <style name="noAnimTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:windowAnimationStyle">@null</item>
-        <item name="colorPrimary">#995544  </item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
 
-    </style>
     <!--<style name="AppFullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
         <!--<item name="android:windowNoTitle">true</item>995544 40d2ff -->
         <!--<item name="android:windowActionBar">false</item>-->
