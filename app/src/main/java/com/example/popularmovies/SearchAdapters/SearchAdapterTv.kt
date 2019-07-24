@@ -1,4 +1,4 @@
-package com.example.popularmovies
+package com.example.popularmovies.SearchAdapters
 
 import android.content.Context
 import android.content.Intent
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.popularmovies.Model.Search
-import com.example.popularmovies.MovieActivites.activity_second
+import com.example.popularmovies.R
 import com.example.popularmovies.TvActivities.MainActivitytv2
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.layout_1.view.*

@@ -10,26 +10,21 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.popularmovies.MainActivityPeople
-import com.example.popularmovies.Model.Searchresonse
+import com.example.popularmovies.PeopleActivities.MainActivityPeople
 
 import com.example.popularmovies.TvActivities.MainActivitytv
 import com.example.popularmovies.Model.movieresponse
 import com.example.popularmovies.Network.popinterface
 import com.example.popularmovies.R
-import com.example.popularmovies.SearchActivity
-import com.example.popularmovies.SearchAdapter
+import com.example.popularmovies.SearchActivities.SearchActivity
 import com.example.popularmovies.movieadapters.movieadapter
 import com.example.popularmovies.movieadapters.upmovieadapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.seachlayout.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -114,7 +109,7 @@ class MainActivity : AppCompatActivity() {
 
 //                searchview.setIconifiedByDefault(false)
                 //searchview.isIconified=false
-                val intent=Intent(this@MainActivity,SearchActivity::class.java)
+                val intent=Intent(this@MainActivity, SearchActivity::class.java)
                 intent.putExtra("text", query)
                 intent.putExtra("type","movie")
                 startActivity(intent)

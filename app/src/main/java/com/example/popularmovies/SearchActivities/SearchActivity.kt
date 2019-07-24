@@ -1,4 +1,4 @@
-package com.example.popularmovies
+package com.example.popularmovies.SearchActivities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +7,10 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.popularmovies.Model.Searchresonse
 import com.example.popularmovies.Network.popinterface
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.popularmovies.R
+import com.example.popularmovies.SearchAdapters.SearchAdapter
+import com.example.popularmovies.SearchAdapters.SearchAdapterPeople
+import com.example.popularmovies.SearchAdapters.SearchAdapterTv
 import kotlinx.android.synthetic.main.activity_search.*
 import retrofit2.Call
 import retrofit2.Callback

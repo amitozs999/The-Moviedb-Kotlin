@@ -1,15 +1,13 @@
-package com.example.popularmovies
+package com.example.popularmovies.PeopleActivities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Contacts
 import android.util.Log
 import com.example.popularmovies.Model.people
-import com.example.popularmovies.Model.tv
 import com.example.popularmovies.Network.popinterface
+import com.example.popularmovies.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_6.*
-import kotlinx.android.synthetic.main.activity_second.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

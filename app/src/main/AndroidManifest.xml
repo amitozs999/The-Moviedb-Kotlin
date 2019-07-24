@@ -13,10 +13,13 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SearchActivity">
+        <activity android:name=".MainActivityFavourite">
         </activity>
-        <activity android:name=".MainActivityPeople2"
-                  android:theme="@style/NoAnimTheme">
+        <activity android:name=".SearchActivities.SearchActivity">
+        </activity>
+        <activity
+                android:name=".PeopleActivities.MainActivityPeople2"
+                android:theme="@style/NoAnimTheme">
         </activity>
         <activity
                 android:name=".TvActivities.MainActivitytv2"
@@ -33,7 +36,7 @@
                     android:value=".MovieActivites.MainActivity"/>
         </activity>
         <activity
-                android:name=".MainActivityPeople"
+                android:name=".PeopleActivities.MainActivityPeople"
                 android:theme="@style/AppTheme">
         </activity>
         <activity

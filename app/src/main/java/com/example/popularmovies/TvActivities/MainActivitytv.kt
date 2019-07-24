@@ -13,12 +13,12 @@ import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.popularmovies.MainActivityPeople
+import com.example.popularmovies.PeopleActivities.MainActivityPeople
 import com.example.popularmovies.Model.tvresponse
 import com.example.popularmovies.MovieActivites.MainActivity
 import com.example.popularmovies.Network.popinterface
 import com.example.popularmovies.R
-import com.example.popularmovies.SearchActivity
+import com.example.popularmovies.SearchActivities.SearchActivity
 import com.example.popularmovies.tvadapters.tvadapter
 import com.example.popularmovies.tvadapters.tvadaptercommon
 import com.google.android.material.bottomnavigation.BottomNavigationView

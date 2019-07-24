@@ -1,4 +1,4 @@
-package com.example.popularmovies
+package com.example.popularmovies.PeopleActivities
 
 import android.app.SearchManager
 import android.content.Context
@@ -12,17 +12,16 @@ import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.popularmovies.Model.movieresponse
 import com.example.popularmovies.Model.peopleresponse
 import com.example.popularmovies.MovieActivites.MainActivity
 import com.example.popularmovies.Network.popinterface
+import com.example.popularmovies.R
+import com.example.popularmovies.SearchActivities.SearchActivity
 import com.example.popularmovies.TvActivities.MainActivitytv
-import com.example.popularmovies.movieadapters.movieadapter
+import com.example.popularmovies.PeopleAdapter.popularpeopleadapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_5.*
-import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -122,7 +121,7 @@ class MainActivityPeople : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId)
         {
-            R.id.searchid->{
+            R.id.searchid ->{
                 return true
             }
             else-> super.onOptionsItemSelected(item)

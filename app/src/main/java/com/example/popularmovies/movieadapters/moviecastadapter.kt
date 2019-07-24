@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.example.popularmovies.MainActivityPeople2
+import com.example.popularmovies.PeopleActivities.MainActivityPeople2
 import com.example.popularmovies.R
 import com.example.popularmovies.Model.moviecast
 import com.squareup.picasso.Picasso
@@ -57,7 +57,7 @@ class moviecastdapter(val context: Context, val namelist:List<moviecast>, val ch
 
         holder.itemView.parentLayout.setOnClickListener {
 
-            val intent= Intent(context,MainActivityPeople2::class.java)
+            val intent= Intent(context, MainActivityPeople2::class.java)
             intent.putExtra("id",item1.id)
             intent.putExtra("type","People")
             ContextCompat.startActivity(context, intent, null)

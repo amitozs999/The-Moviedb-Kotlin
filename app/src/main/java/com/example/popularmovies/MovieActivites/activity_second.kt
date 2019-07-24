@@ -3,6 +3,7 @@ package com.example.popularmovies.MovieActivites
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,6 +24,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+@Suppress("DEPRECATION")
 class activity_second : AppCompatActivity() {
 
 
@@ -43,6 +45,24 @@ class activity_second : AppCompatActivity() {
         val id = intent.getStringExtra("id").toInt()
 
         val type = intent.getStringExtra("type")
+        var fill=0
+
+        val imgfav=findViewById<ImageView>(R.id.imagefav)
+        imgfav.setOnClickListener {
+
+            if(fill==1)
+            {
+                imgfav.setImageResource(R.drawable.ic_favorite_border)
+                fill=0
+
+            }
+            else {
+
+
+                imgfav.setImageResource(R.drawable.ic_favorite_fill)
+                fill = 1
+            }
+        }
 
         val service=retrofit.create(popinterface::class.java)
         service.getmovies(id,api_key).enqueue(object : Callback<movie_search> {
@@ -55,6 +75,8 @@ class activity_second : AppCompatActivity() {
             override fun onResponse(call: Call<movie_search>, response: Response<movie_search>) {
 
                 val data=response.body()
+
+
 
 
 
