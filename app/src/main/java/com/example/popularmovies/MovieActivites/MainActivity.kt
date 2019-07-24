@@ -14,6 +14,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.popularmovies.MainActivityFavourite
 import com.example.popularmovies.PeopleActivities.MainActivityPeople
 
 import com.example.popularmovies.TvActivities.MainActivitytv
@@ -69,6 +70,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.person -> {
                     val  intent3=Intent(this, MainActivityPeople::class.java)
                     startActivity(intent3)
+                    return@setOnNavigationItemSelectedListener  true
+                }
+                R.id.FAV -> {
+                    val  intent4= Intent(this, MainActivityFavourite::class.java)
+                    startActivity(intent4)
                     return@setOnNavigationItemSelectedListener  true
                 }
                 else-> return@setOnNavigationItemSelectedListener  true

@@ -8,11 +8,12 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.popularmovies.Model.movie
+import com.example.popularmovies.Model.movie_search
 import com.example.popularmovies.MovieActivites.activity_second
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.layout_1.view.*
 
-class favouriteAdapter(val context: Context, val namelist:List<movie>, val check:Boolean): RecyclerView.Adapter<favouriteAdapter.myviewholder>() {
+class favouriteAdapter(val context: Context, val namelist:movie_search, val check:Boolean): RecyclerView.Adapter<favouriteAdapter.myviewholder>() {
 
     val baseURL = "https://image.tmdb.org/t/p/w342/"
     class myviewholder(itemView: View): RecyclerView.ViewHolder(itemView)
@@ -20,7 +21,7 @@ class favouriteAdapter(val context: Context, val namelist:List<movie>, val check
     override fun getItemCount(): Int {
         if(check==false)
             if (namelist != null) {
-                return namelist.size
+                return 1
 
             }
 
@@ -37,7 +38,7 @@ class favouriteAdapter(val context: Context, val namelist:List<movie>, val check
 
     override fun onBindViewHolder(holder: myviewholder, position: Int) {
 
-        val item1= this.namelist[position]
+        val item1= this.namelist
         holder.itemView.ltView.text=item1.original_title
         val target=item1.poster_path
         Picasso.get().load(baseURL+target).into(holder.itemView.liView)
