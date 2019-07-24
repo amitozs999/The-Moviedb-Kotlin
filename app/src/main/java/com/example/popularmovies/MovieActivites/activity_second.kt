@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.room.Room
+import com.example.popularmovies.Favourite
+import com.example.popularmovies.FavouriteDatabase
 import com.example.popularmovies.Model.movie_search
 import com.example.popularmovies.Model.moviecastresopnse
 import com.example.popularmovies.Model.movieresponse
@@ -45,21 +49,52 @@ class activity_second : AppCompatActivity() {
         val id = intent.getStringExtra("id").toInt()
 
         val type = intent.getStringExtra("type")
+
+
+        val db: FavouriteDatabase by lazy {
+            Room.databaseBuilder(
+                this,
+                FavouriteDatabase::class.java,
+                "Fav.db"
+            ).allowMainThreadQueries()
+                .fallbackToDestructiveMigration()
+                .build()
+        }
+
+
+
         var fill=0
 
+
         val imgfav=findViewById<ImageView>(R.id.imagefav)
+
+        val isFav = db.FavDao().isFavourite(id.toString())
+
+        if(isFav == null) {
+            fill= 0
+            imgfav.setImageResource(R.drawable.ic_favorite_border)
+        } else {
+            fill = 1
+            imgfav.setImageResource(R.drawable.ic_favorite_fill)
+        }
+
         imgfav.setOnClickListener {
 
             if(fill==1)
             {
                 imgfav.setImageResource(R.drawable.ic_favorite_border)
+                db.FavDao().delete(id.toString())
+                Toast.makeText(this, "Removed from favourite", Toast.LENGTH_SHORT).show()
                 fill=0
 
             }
             else {
 
-
+                var obj=Favourite(movie_id = id.toString())
+                db.FavDao().insertRow(obj)
                 imgfav.setImageResource(R.drawable.ic_favorite_fill)
+                Toast.makeText(this, "Added to favourite", Toast.LENGTH_SHORT).show()
+
                 fill = 1
             }
         }
