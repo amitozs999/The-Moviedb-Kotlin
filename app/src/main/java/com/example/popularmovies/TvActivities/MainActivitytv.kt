@@ -11,6 +11,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.popularmovies.PeopleActivities.MainActivityPeople
@@ -47,6 +48,15 @@ class MainActivitytv : AppCompatActivity() {
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        text0.isVisible=false
+        text1.isVisible=false
+        text2.isVisible=false
+        text3.isVisible=false
+        text00tv.isVisible=false
+        text10tv.isVisible=false
+        text20tv.isVisible=false
+        text30tv.isVisible=false
 
 
         val naview=findViewById<View>(R.id.nav) as BottomNavigationView
@@ -194,6 +204,16 @@ class MainActivitytv : AppCompatActivity() {
 
                 val data=response.body()
                 val data1= data?.results
+
+                text0.isVisible=true
+                text1.isVisible=true
+                text2.isVisible=true
+                text3.isVisible=true
+                text00tv.isVisible=true
+                text10tv.isVisible=true
+                text20tv.isVisible=true
+                text30tv.isVisible=true
+                progressBar2.isVisible=false
 
 
                 //  rView.layoutManager =

@@ -1,6 +1,7 @@
 package com.example.popularmovies.MovieActivites
 
 
+import android.app.ProgressDialog
 import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
@@ -12,6 +13,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.popularmovies.MainActivityFavourite
@@ -46,6 +48,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        text0.isVisible=false
+        text1.isVisible=false
+        text2.isVisible=false
+        text3.isVisible=false
+
+        text00.isVisible=false
+        text10.isVisible=false
+        text20.isVisible=false
+        text30.isVisible=false
+
+
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -316,6 +330,15 @@ class MainActivity : AppCompatActivity() {
 
                 //  rView.layoutManager =
                 //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
+                text0.isVisible=true
+                text1.isVisible=true
+                text2.isVisible=true
+                text3.isVisible=true
+                text00.isVisible=true
+                text10.isVisible=true
+                text20.isVisible=true
+                text30.isVisible=true
+                progressBar.isVisible=false
 
                 rView0.layoutManager =
                     LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL,false)

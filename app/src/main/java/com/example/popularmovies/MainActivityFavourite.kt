@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,6 +19,7 @@ import com.example.popularmovies.PeopleActivities.MainActivityPeople
 import com.example.popularmovies.TvActivities.MainActivitytv
 import com.example.popularmovies.movieadapters.movieadapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_7.*
 import kotlinx.android.synthetic.main.activity_second.*
 import retrofit2.Call
@@ -89,10 +91,15 @@ class MainActivityFavourite : AppCompatActivity() {
        var a= db.FavDao().getallfav()
         Log.d("AMITOZ",a.size.toString())
 
-        for(i in 1 until a.size)
-        {
-            var id =a[i].movie_id.toInt()
-            service.getmovies(id,api_key).enqueue(object : Callback<movie_search> {
+        for(i in 1 until a.size) {
+//            var id = a[1].movie_id.toInt()
+//            var path = a[1].path
+//            var a=imagView0
+//            Log.d("sss",a.toString())
+//            Picasso.get().load(baseURL + path).resize(150, 270).into(a)
+
+
+            service.getmovies(a[i].movie_id.toInt(),api_key).enqueue(object : Callback<movie_search> {
                 override fun onFailure(call: Call<movie_search>, t: Throwable) {
                     Log.d("MoviesDagger", t.toString())
                 }
@@ -112,6 +119,7 @@ class MainActivityFavourite : AppCompatActivity() {
 
                     rvfav.layoutManager =
                         GridLayoutManager(this@MainActivityFavourite,2, RecyclerView.VERTICAL,false)
+                    rvfav.paddingTop
                     rvfav.adapter = data?.let {
                         favouriteAdapter(
                             this@MainActivityFavourite,
@@ -125,8 +133,8 @@ class MainActivityFavourite : AppCompatActivity() {
                 }
             })
 
-
         }
+
     }
     override fun onBackPressed() {
         val i=Intent(this,MainActivity::class.java)

@@ -1,6 +1,7 @@
 package com.example.popularmovies.Network
 
 
+import com.example.popularmovies.Favourite
 import com.example.popularmovies.Model.*
 import retrofit2.Call
 import retrofit2.http.GET
@@ -49,6 +50,13 @@ interface popinterface {
         @Path("id") id:Int,
         @Query("api_key") key: String
     ) :Call<movie_search>
+
+    @GET("3/movie/{id}")
+    fun getfav(
+
+        @Path("id") id:Int,
+        @Query("api_key") key: String
+    ) :Call<List<Favourite>>
 
     @GET("3/movie/{movie_id}/credits")
     fun getcast(

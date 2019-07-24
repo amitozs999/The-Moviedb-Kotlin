@@ -38,6 +38,7 @@ class activity_second : AppCompatActivity() {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
     val baseURL = "https://image.tmdb.org/t/p/w780/"
+    val service=retrofit.create(popinterface::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -92,16 +93,37 @@ class activity_second : AppCompatActivity() {
             }
             else {
 
-                var obj=Favourite(movie_id = id.toString())
-                db.FavDao().insertRow(obj)
-                imgfav.setImageResource(R.drawable.ic_favorite_fill)
-                Toast.makeText(this, "Added to favourite", Toast.LENGTH_SHORT).show()
+                service.getmovies(id,api_key).enqueue(object : Callback<movie_search> {
+                    override fun onFailure(call: Call<movie_search>, t: Throwable) {
+                        Log.d("MoviesDagger", t.toString())
+                    }
 
-                fill = 1
+
+
+                    override fun onResponse(call: Call<movie_search>, response: Response<movie_search>) {
+
+                        val data=response.body()
+
+                        var obj=Favourite(movie_id = id.toString(),path = data!!.poster_path.toString())
+                        db.FavDao().insertRow(obj)
+                        imgfav.setImageResource(R.drawable.ic_favorite_fill)
+                        Toast.makeText(this@activity_second, "Added to favourite", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+
+
+
+                    }
+                })
+
+
             }
         }
 
-        val service=retrofit.create(popinterface::class.java)
+
         service.getmovies(id,api_key).enqueue(object : Callback<movie_search> {
             override fun onFailure(call: Call<movie_search>, t: Throwable) {
                 Log.d("MoviesDagger", t.toString())

@@ -20,6 +20,16 @@
 
         android:layout_height="match_parent" android:layout_width="match_parent">
 
+    <ProgressBar
+            android:id="@+id/progressBar"
+            android:visibility="visible"
+            android:scaleX="0.10"
+            android:scaleY="0.10"
+            android:textColor="@color/colorAccent"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"/>
+
 
 <com.google.android.material.bottomnavigation.BottomNavigationView
                                 android:layout_width="match_parent"

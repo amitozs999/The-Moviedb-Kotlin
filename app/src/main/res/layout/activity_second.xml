@@ -58,7 +58,7 @@
                             android:layout_marginLeft="160dp" android:layout_marginTop="25dp"
                             android:layout_marginBottom="5dp"/>
 
-                    <TextView android:layout_width="match_parent" android:layout_height="35dp" android:text="TITLE"
+                    <TextView android:layout_width="match_parent" android:layout_height="35dp"
                               android:textColor="@android:color/white" android:id="@+id/tv1" android:textSize="15sp"/>
 
                     <ImageButton
@@ -68,7 +68,6 @@
                     />
                     <TextView android:layout_width="80dp" android:layout_height="45dp"
                               android:textColor="@android:color/white"
-                              android:text="TITLE"
                               android:layout_marginLeft="30dp" android:layout_marginTop="-20dp" android:id="@+id/tv3"/>
                 </LinearLayout>
 
