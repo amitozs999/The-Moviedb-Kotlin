@@ -103,11 +103,12 @@ class activity_second : AppCompatActivity() {
                     override fun onResponse(call: Call<movie_search>, response: Response<movie_search>) {
 
                         val data=response.body()
-
-                        var obj=Favourite(movie_id = id.toString(),path = data!!.poster_path.toString())
-                        db.FavDao().insertRow(obj)
-                        imgfav.setImageResource(R.drawable.ic_favorite_fill)
-                        Toast.makeText(this@activity_second, "Added to favourite", Toast.LENGTH_SHORT).show()
+                        if(response.isSuccessful) {
+                            var obj=Favourite(movie_id = id.toString(),path = data!!.poster_path.toString())
+                            db.FavDao().insertRow(obj)
+                            imgfav.setImageResource(R.drawable.ic_favorite_fill)
+                            Toast.makeText(this@activity_second, "Added to favourite", Toast.LENGTH_SHORT).show()
+                        }
 
 
 

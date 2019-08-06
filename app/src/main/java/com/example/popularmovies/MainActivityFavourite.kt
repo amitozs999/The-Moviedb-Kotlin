@@ -3,6 +3,7 @@ package com.example.popularmovies
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
@@ -37,6 +38,8 @@ class MainActivityFavourite : AppCompatActivity() {
         .build()
     val baseURL = "https://image.tmdb.org/t/p/w780/"
     val service=retrofit.create(popinterface::class.java)
+    var favList : ArrayList<movie_search> = arrayListOf<movie_search>()
+    var check : Boolean = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +48,8 @@ class MainActivityFavourite : AppCompatActivity() {
         var menu = naview.menu
         var menuItem = menu.getItem(3)
         menuItem.isChecked = true
+
+        favList.clear()
 
         naview.setOnNavigationItemSelectedListener {
             when (it.itemId) {
@@ -91,7 +96,8 @@ class MainActivityFavourite : AppCompatActivity() {
        var a= db.FavDao().getallfav()
         Log.d("AMITOZ",a.size.toString())
 
-        for(i in 1 until a.size) {
+        for(i in 0 .. a.lastIndex) {
+            Log.d("myCHECK", "LOOP")
 //            var id = a[1].movie_id.toInt()
 //            var path = a[1].path
 //            var a=imagView0
@@ -111,28 +117,45 @@ class MainActivityFavourite : AppCompatActivity() {
 
                     val data=response.body()
                     Log.d("gggg",data!!.original_title)
+                    favList.add(data)
+                    Log.d("myCHECK","ADDED")
+
+                    if(i == a.lastIndex) {
+                        Log.d("myCHECK","${favList.size}")
+                        if (favList.size != 0) {
+                            check = false
+                        }
+
+                        rvfav.layoutManager =
+                            GridLayoutManager(this@MainActivityFavourite,2, RecyclerView.VERTICAL,false)
+                        rvfav.adapter =
+                            favouriteAdapter(
+                                this@MainActivityFavourite,
+                                favList,
+                                check
+                            )
+                    }
 
 
 
                     //  rView.layoutManager =
                     //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
 
-                    rvfav.layoutManager =
-                        GridLayoutManager(this@MainActivityFavourite,2, RecyclerView.VERTICAL,false)
-                    rvfav.paddingTop
-                    rvfav.adapter = data?.let {
-                        favouriteAdapter(
-                            this@MainActivityFavourite,
-                            it,
-                            false
-                        )
-                    }
+//                    rvfav.layoutManager =
+//                        GridLayoutManager(this@MainActivityFavourite,2, RecyclerView.VERTICAL,false)
+//                    rvfav.paddingTop
+//                    rvfav.adapter = data?.let {
+//                        favouriteAdapter(
+//                            this@MainActivityFavourite,
+//                            it,
+//                            false
+//                        )
+//                    }
 
 
 
                 }
             })
-
         }
 
     }
