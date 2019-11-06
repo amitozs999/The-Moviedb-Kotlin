@@ -9,7 +9,7 @@
         <androidx.appcompat.widget.Toolbar android:layout_width="match_parent"
                                            android:layout_height="wrap_content"
                                            android:id="@+id/toolbar"
-                                           app:title="MOVIEAPP"
+                                           app:title="Movies Point"
                                            app:titleTextColor="@android:color/white"
                                            android:background="#40d2ff" app:titleMargin="10dp"
                                            android:paddingLeft="17dp" android:paddingRight="20dp">
