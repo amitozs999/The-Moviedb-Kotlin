@@ -15,7 +15,7 @@
             android:layout_width="140dp"
             android:layout_height="wrap_content">
         <ImageView
-                android:src="@drawable/ic_launcher_foreground"
+
                 android:layout_gravity="center"
                 android:background="@android:color/white"
                 android:id="@+id/liView"

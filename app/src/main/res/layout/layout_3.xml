@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <ImageView
-                android:src="@drawable/ic_launcher_foreground"
+
                 android:layout_gravity="center"
                 android:background="@android:color/white"
                 android:id="@+id/castimage"

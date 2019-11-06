@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.example.popularmovies">
+          package="com.movietvapp.popularmovies">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -13,54 +13,54 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivityFavourite">
+        <activity android:name="com.movietvapp.popularmovies.MainActivityFavourite">
         </activity>
-        <activity android:name=".SearchActivities.SearchActivity">
+        <activity android:name="com.movietvapp.popularmovies.SearchActivities.SearchActivity">
         </activity>
         <activity
-                android:name=".PeopleActivities.MainActivityPeople2"
+                android:name="com.movietvapp.popularmovies.PeopleActivities.MainActivityPeople2"
                 android:theme="@style/NoAnimTheme">
         </activity>
         <activity
-                android:name=".TvActivities.MainActivitytv2"
-                android:theme="@style/NoAnimTheme">
-            <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".TvActivities.MainActivitytv"/>
-        </activity>
-        <activity
-                android:name=".MovieActivites.viewallact"
+                android:name="com.movietvapp.popularmovies.TvActivities.MainActivitytv2"
                 android:theme="@style/NoAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".MovieActivites.MainActivity"/>
+                    android:value="com.movietvapp.popularmovies.TvActivities.MainActivitytv"/>
         </activity>
         <activity
-                android:name=".PeopleActivities.MainActivityPeople"
+                android:name="com.movietvapp.popularmovies.MovieActivites.viewallact"
+                android:theme="@style/NoAnimTheme">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.movietvapp.popularmovies.MovieActivites.MainActivity"/>
+        </activity>
+        <activity
+                android:name="com.movietvapp.popularmovies.PeopleActivities.MainActivityPeople"
                 android:theme="@style/AppTheme">
         </activity>
         <activity
-                android:name=".TvActivities.MainActivitytv"
+                android:name="com.movietvapp.popularmovies.TvActivities.MainActivitytv"
                 android:theme="@style/AppTheme">
         </activity>
         <activity
-                android:name=".MovieActivites.activity_second"
+                android:name="com.movietvapp.popularmovies.MovieActivites.activity_second"
                 android:screenOrientation="portrait"
                 android:theme="@style/NoAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".MovieActivites.MainActivity"/>
+                    android:value="com.movietvapp.popularmovies.MovieActivites.MainActivity"/>
         </activity>
         <activity
-                android:name=".TvActivities.viewallacttv"
+                android:name="com.movietvapp.popularmovies.TvActivities.viewallacttv"
                 android:screenOrientation="portrait"
                 android:theme="@style/NoAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".TvActivities.MainActivitytv"/>
+                    android:value="com.movietvapp.popularmovies.TvActivities.MainActivitytv"/>
         </activity>
         <activity
-                android:name=".MovieActivites.MainActivity"
+                android:name="com.movietvapp.popularmovies.MovieActivites.MainActivity"
                 android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

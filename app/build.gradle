@@ -10,7 +10,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "com.example.popularmovies"
+        applicationId "com.movietvapp.popularmovies"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
