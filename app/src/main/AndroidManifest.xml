@@ -15,7 +15,12 @@
             tools:ignore="GoogleAppIndexingWarning">
         <activity android:name="com.movietvapp.popularmovies.MainActivityFavourite">
         </activity>
-        <activity android:name="com.movietvapp.popularmovies.SearchActivities.SearchActivity">
+        <activity android:name="com.movietvapp.popularmovies.SearchActivities.SearchActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/NoAnimTheme">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.movietvapp.popularmovies.MovieActivites.MainActivity"/>
         </activity>
         <activity
                 android:name="com.movietvapp.popularmovies.PeopleActivities.MainActivityPeople2"
@@ -30,6 +35,7 @@
         </activity>
         <activity
                 android:name="com.movietvapp.popularmovies.MovieActivites.viewallact"
+                android:screenOrientation="portrait"
                 android:theme="@style/NoAnimTheme">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"

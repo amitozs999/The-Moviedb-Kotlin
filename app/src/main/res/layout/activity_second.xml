@@ -18,18 +18,31 @@
                     android:id="@+id/rl1"
 
                     android:layout_width="match_parent"
-                    android:layout_height="200dp">
-                <ImageView android:layout_width="match_parent" android:layout_height="200dp" android:id="@+id/iview"
-                />
-                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-                    <TextView android:layout_width="250dp" android:layout_height="67dp"
-                              android:textStyle="bold"
+                    android:layout_height="200sp">
 
-                              android:id="@+id/tv7" android:layout_marginTop="130dp" android:layout_marginLeft="50dp"
+                <ImageView
+                        android:id="@+id/iview"
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp" />
 
-                              android:text="TITLE"
+                <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
 
-                              android:textColor="@android:color/white" android:textSize="25dp"/>
+                    <TextView
+                            android:id="@+id/tv7"
+                            android:layout_width="250sp"
+                            android:layout_height="67sp"
+
+                            android:layout_marginLeft="50sp"
+                            android:layout_marginTop="130sp"
+                            android:scrollbarSize="4sp"
+
+                            android:text="TITLE"
+
+                            android:textColor="@android:color/white"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
                 </RelativeLayout>
 
 
@@ -37,76 +50,128 @@
 
             <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="200sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="-2sp"
+                    android:background="#324C58"
                     android:orientation="horizontal"
-                    android:background="#324C58" android:layout_marginTop="-2dp" android:layout_alignParentStart="true">
-                <LinearLayout
-                        android:layout_width="wrap_content" android:layout_height="match_parent">
-                    <ImageView
-                            android:layout_marginLeft="40dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_width="120dp" android:layout_height="170dp" android:layout_marginRight="30dp"
-                            android:id="@+id/imageview2" android:visibility="visible"/>
-                </LinearLayout>
-                <LinearLayout android:layout_width="215dp" android:layout_height="match_parent"
-                              android:orientation="vertical">
-                    <ImageView
-                            android:layout_width="42dp"
-                            android:layout_height="38dp" android:src="@drawable/ic_favorite_border"
-                            android:id="@+id/imagefav" android:background="#324C58"
-                            android:layout_marginLeft="160dp" android:layout_marginTop="25dp"
-                            android:layout_marginBottom="5dp"/>
+                    android:scrollbarSize="4sp">
 
-                    <TextView android:layout_width="match_parent" android:layout_height="35dp"
-                              android:textColor="@android:color/white" android:id="@+id/tv1" android:textSize="15sp"/>
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:scrollbarSize="4sp">
+
+                    <ImageView
+                            android:id="@+id/imageview2"
+                            android:layout_width="120sp"
+                            android:layout_height="170sp"
+                            android:layout_marginLeft="40sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginRight="30sp"
+                            android:layout_marginBottom="10sp"
+                            android:scrollbarSize="4sp"
+                            android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:scrollbarSize="4sp">
+
+                    <ImageView
+                            android:id="@+id/imagefav"
+                            android:layout_width="42sp"
+                            android:layout_height="38sp"
+                            android:layout_marginLeft="95sp"
+                            android:layout_marginTop="25sp"
+                            android:layout_marginBottom="5sp"
+                            android:background="#324C58"
+                            android:scrollbarSize="4sp"
+                            android:src="@drawable/ic_favorite_border" />
+
+                    <TextView
+                            android:id="@+id/tv1"
+                            android:layout_width="match_parent"
+                            android:layout_height="35sp"
+                            android:scrollbarSize="4sp"
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp" />
 
                     <ImageButton
+                            android:id="@+id/imageButton"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:src="@drawable/ic_star_2"
-                            android:id="@+id/imageButton" android:background="#324C58"
-                    />
-                    <TextView android:layout_width="80dp" android:layout_height="45dp"
-                              android:textColor="@android:color/white"
-                              android:layout_marginLeft="30dp" android:layout_marginTop="-20dp" android:id="@+id/tv3"/>
+                            android:layout_height="wrap_content"
+                            android:background="#324C58"
+                            android:src="@drawable/ic_star_2" />
+
+                    <TextView
+                            android:id="@+id/tv3"
+                            android:layout_width="80sp"
+                            android:layout_height="45sp"
+                            android:layout_marginLeft="30sp"
+                            android:layout_marginTop="-20sp"
+                            android:scrollbarSize="4sp"
+                            android:textColor="@android:color/white" />
                 </LinearLayout>
 
             </LinearLayout>
+
             <LinearLayout
 
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:scrollbarSize="4sp">
+
                 <TextView
-                        android:text="Description"
+                        android:id="@+id/textView"
                         android:layout_width="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:layout_height="30dp" android:id="@+id/textView"
-                        android:textSize="22sp" android:layout_marginLeft="10sp"/>
-                <TextView
-                        android:text="TextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/tvoverview"
+                        android:layout_height="30sp"
                         android:layout_marginLeft="10sp"
-                        android:layout_marginRight="10sp" android:layout_marginBottom="10sp"
-                        android:layout_marginTop="5dp"/>
+                        android:fontFamily="sans-serif-black"
+                        android:scrollbarSize="4sp"
+                        android:text="Description"
+                        android:textSize="22sp" />
+
+                <TextView
+                        android:id="@+id/tvoverview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:scrollbarSize="4sp"
+                        android:text="TextView" />
             </LinearLayout>
+
             <LinearLayout
 
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:orientation="vertical">
-                <TextView
-                        android:text="Cast"
-                        android:layout_width="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:layout_height="30dp" android:id="@+id/textView4"
-                        android:textSize="22sp" android:layout_marginLeft="10sp"/>
-                <androidx.recyclerview.widget.RecyclerView
-                        android:layout_weight="1"
-                        android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:scrollbarSize="4sp">
 
+                <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="10sp"
+                        android:fontFamily="sans-serif-black"
+                        android:scrollbarSize="4sp"
+                        android:text="Cast"
+                        android:textSize="22sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rView20"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:scrollbarSize="4sp">
 
                 </androidx.recyclerview.widget.RecyclerView>
 
@@ -115,20 +180,28 @@
             <LinearLayout
 
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:orientation="vertical">
-                <TextView
-                        android:text="Similar Movies"
-                        android:layout_width="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:layout_height="30dp" android:id="@+id/textView5"
-                        android:textSize="22sp" android:layout_marginLeft="10sp"/>
-                <androidx.recyclerview.widget.RecyclerView
-                        android:layout_weight="1"
-                        android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:scrollbarSize="4sp">
 
+                <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="10sp"
+                        android:fontFamily="sans-serif-black"
+                        android:scrollbarSize="4sp"
+                        android:text="Similar Movies"
+                        android:textSize="22sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rView21"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:scrollbarSize="4sp">
 
                 </androidx.recyclerview.widget.RecyclerView>
 
@@ -137,20 +210,26 @@
             <LinearLayout
 
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:orientation="vertical">
-                <TextView
-                        android:text="Trailer"
-                        android:layout_width="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:layout_height="30dp" android:id="@+id/textView6"
-                        android:textSize="22sp" android:layout_marginLeft="10sp"/>
-                <androidx.recyclerview.widget.RecyclerView
-                        android:layout_weight="1"
-                        android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:scrollbarSize="4sp">
 
+                <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10sp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Trailer"
+                        android:textSize="22sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rView22"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
 
                 </androidx.recyclerview.widget.RecyclerView>
 
