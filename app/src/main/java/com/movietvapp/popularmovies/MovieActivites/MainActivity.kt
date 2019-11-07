@@ -231,6 +231,11 @@ class MainActivity : AppCompatActivity() {
                 //  rView.layoutManager =
                 //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
 
+                text1.isVisible=true
+                text10.isVisible=true
+
+                progressBar.isVisible=false
+
                 rView.layoutManager =
                     LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL,false)
                 rView.adapter = data1?.let {
@@ -258,6 +263,8 @@ class MainActivity : AppCompatActivity() {
 
                 val data=response.body()
                 val data1= data?.results
+                text20.isVisible=true
+                text2.isVisible=true
 
 
                 //  rView.layoutManager =
@@ -290,6 +297,9 @@ class MainActivity : AppCompatActivity() {
 
                 val data=response.body()
                 val data1= data?.results
+                text3.isVisible=true
+                text30.isVisible=true
+
 
 
                 //  rView.layoutManager =
@@ -325,19 +335,13 @@ class MainActivity : AppCompatActivity() {
 
                 val data=response.body()
                 val data1= data?.results
+                text0.isVisible=true
+                text00.isVisible=true
 
 
                 //  rView.layoutManager =
                 //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
-                text0.isVisible=true
-                text1.isVisible=true
-                text2.isVisible=true
-                text3.isVisible=true
-                text00.isVisible=true
-                text10.isVisible=true
-                text20.isVisible=true
-                text30.isVisible=true
-                progressBar.isVisible=false
+
 
                 rView0.layoutManager =
                     LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL,false)

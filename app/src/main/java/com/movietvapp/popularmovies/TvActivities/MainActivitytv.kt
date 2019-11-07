@@ -25,6 +25,11 @@ import com.movietvapp.popularmovies.tvadapters.tvadaptercommon
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.movietvapp.popularmovies.MainActivityFavourite
 import kotlinx.android.synthetic.main.activity_3.*
+import kotlinx.android.synthetic.main.activity_3.text0
+import kotlinx.android.synthetic.main.activity_3.text1
+import kotlinx.android.synthetic.main.activity_3.text2
+import kotlinx.android.synthetic.main.activity_3.text3
+import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -199,6 +204,7 @@ class MainActivitytv : AppCompatActivity() {
 
 
         }
+        
 
         service.getairingtoday(api_key,language).enqueue(object : Callback<tvresponse> {
             override fun onFailure(call: Call<tvresponse>, t: Throwable) {
@@ -211,16 +217,13 @@ class MainActivitytv : AppCompatActivity() {
 
                 val data=response.body()
                 val data1= data?.results
-
                 text0.isVisible=true
-                text1.isVisible=true
-                text2.isVisible=true
-                text3.isVisible=true
                 text00tv.isVisible=true
-                text10tv.isVisible=true
-                text20tv.isVisible=true
-                text30tv.isVisible=true
-                progressBar2.isVisible=false
+
+
+
+
+
 
 
                 //  rView.layoutManager =
@@ -252,7 +255,9 @@ class MainActivitytv : AppCompatActivity() {
 
                 val data=response.body()
                 val data1= data?.results
-
+                text1.isVisible=true
+                text10tv.isVisible=true
+                progressBar2.isVisible=false
 
                 //  rView.layoutManager =
                 //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
@@ -283,6 +288,8 @@ class MainActivitytv : AppCompatActivity() {
 
                 val data=response.body()
                 val data1= data?.results
+                text2.isVisible=true
+                text20tv.isVisible=true
 
 
                 //  rView.layoutManager =
@@ -314,6 +321,8 @@ class MainActivitytv : AppCompatActivity() {
 
                 val data=response.body()
                 val data1= data?.results
+                text3.isVisible=true
+                text30tv.isVisible=true
 
 
                 //  rView.layoutManager =

@@ -40,7 +40,8 @@ class movieadapter(val context:Context, val namelist:List<movie>, val check:Bool
         val item1= this.namelist[position]
         holder.itemView.ltView.text=item1.original_title
         val target=item1.poster_path
-        Picasso.get().load(baseURL+target).into(holder.itemView.liView)
+
+        Picasso.get().load(baseURL+target).resize(140,170).into(holder.itemView.liView)
 
         holder.itemView.parentLayout.setOnClickListener {
 

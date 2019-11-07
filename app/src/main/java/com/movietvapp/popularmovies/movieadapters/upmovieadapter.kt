@@ -41,7 +41,7 @@ class upmovieadapter(val context: Context, val namelist:List<movie>, val check:B
         val item1= this.namelist[position]
         holder.itemView.ltView.text=item1.original_title
         val target=item1.backdrop_path
-        Picasso.get().load(baseURL+target).resize(330,200).into(holder.itemView.liView)
+        Picasso.get().load(baseURL+target).resize(300,180).into(holder.itemView.liView)
         holder.itemView.parentLayout.setOnClickListener {
 
             val intent= Intent(context, activity_second::class.java)

@@ -22,13 +22,15 @@
 
     <ProgressBar
             android:id="@+id/progressBar"
-            android:visibility="visible"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#00FFFFFF"
             android:scaleX="0.10"
             android:scaleY="0.10"
             android:textColor="@color/colorAccent"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:layout_gravity="center"/>
+            android:visibility="visible" />
 
 
 <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -51,32 +53,36 @@
                       android:orientation="vertical">
 
 
-            <FrameLayout
+            <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dp" android:paddingLeft="12dp">
+                    android:layout_height="35sp"
+                    android:paddingLeft="12sp">
 
 
                 <TextView
 
-                        android:text="Now Playing"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@android:color/black"
                         android:id="@+id/text0"
-                        android:textSize="20sp"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
-                        android:layout_marginLeft="12dp"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12sp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Now Playing"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
                 <TextView
 
-                        android:text="➞"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@android:color/darker_gray"
                         android:id="@+id/text00"
-                        android:textSize="20dp"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
-                        android:layout_marginLeft="355dp"/>
-            </FrameLayout>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:drawableRight="@drawable/ic_arrow_forward"
+                        android:fontFamily="sans-serif-black"
+                        android:paddingRight="20sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="20sp" />
+            </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
                     android:layout_weight="1"
                     android:orientation="horizontal"
@@ -88,32 +94,36 @@
             </androidx.recyclerview.widget.RecyclerView>
 
 
-            <FrameLayout
+            <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" android:paddingLeft="12dp">
+                    android:layout_height="35sp"
+                    android:paddingLeft="12sp">
 
 
                 <TextView
 
-                        android:text="Popular"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@android:color/black"
                         android:id="@+id/text1"
-                        android:textSize="20sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_marginLeft="12dp"
-                        android:layout_marginTop="20dp"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12sp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Popular"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
                 <TextView
 
-                        android:text="➞"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@android:color/darker_gray"
                         android:id="@+id/text10"
-                        android:textSize="20dp"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
-                        android:layout_marginLeft="355dp"/>
-            </FrameLayout>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:drawableRight="@drawable/ic_arrow_forward"
+                        android:fontFamily="sans-serif-black"
+                        android:paddingRight="20sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="20sp" />
+            </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
                     android:layout_weight="1"
                     android:orientation="horizontal"
@@ -123,32 +133,36 @@
                     android:layout_height="match_parent">
 
             </androidx.recyclerview.widget.RecyclerView>
-            <FrameLayout
+            <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dp" android:paddingLeft="12dp">
+                    android:layout_height="35sp"
+                    android:paddingLeft="12sp">
 
 
                 <TextView
 
-                        android:text="Top Rated"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@android:color/black"
                         android:id="@+id/text2"
-                        android:textSize="20sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
-                        android:layout_marginLeft="12dp"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12sp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Top Rated"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
                 <TextView
 
-                        android:text="➞"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@android:color/darker_gray"
                         android:id="@+id/text20"
-                        android:textSize="20dp"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
-                        android:layout_marginLeft="355dp"/>
-            </FrameLayout>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:drawableRight="@drawable/ic_arrow_forward"
+                        android:fontFamily="sans-serif-black"
+                        android:paddingRight="20sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="20sp" />
+            </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
                     android:layout_weight="1"
                     android:orientation="horizontal"
@@ -159,32 +173,36 @@
 
             </androidx.recyclerview.widget.RecyclerView>
 
-            <FrameLayout
+            <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dp" android:paddingLeft="12dp">
+                    android:layout_height="35sp"
+                    android:paddingLeft="12sp">
 
 
                 <TextView
 
-                        android:text="Upcoming"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@android:color/black"
                         android:id="@+id/text3"
-                        android:textSize="20sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
-                        android:layout_marginLeft="12dp"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12sp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Upcoming"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
                 <TextView
 
-                        android:text="➞"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@android:color/darker_gray"
                         android:id="@+id/text30"
-                        android:textSize="20dp"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content" android:layout_marginTop="10dp"
-                        android:layout_marginLeft="355dp"/>
-            </FrameLayout>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:drawableRight="@drawable/ic_arrow_forward"
+                        android:fontFamily="sans-serif-black"
+                        android:paddingRight="20sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="20sp" />
+            </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
                     android:layout_weight="1"
                     android:orientation="horizontal"

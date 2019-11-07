@@ -41,7 +41,7 @@ class tvadapter(val context: Context, val namelist:List<tv>, val check:Boolean):
         val item1= this.namelist[position]
         holder.itemView.ltView.text=item1.original_name
         val target=item1.backdrop_path
-        Picasso.get().load(baseURL+target).resize(330,200).into(holder.itemView.liView)
+        Picasso.get().load(baseURL+target).resize(300,180).into(holder.itemView.liView)
         holder.itemView.parentLayout.setOnClickListener {
 
             val intent= Intent(context, MainActivitytv2::class.java)
