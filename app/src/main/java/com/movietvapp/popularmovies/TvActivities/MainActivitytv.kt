@@ -206,7 +206,7 @@ class MainActivitytv : AppCompatActivity() {
         }
 
 
-        service.getairingtoday(api_key,language).enqueue(object : Callback<tvresponse> {
+        service.getairingtoday(api_key,language,"1").enqueue(object : Callback<tvresponse> {
             override fun onFailure(call: Call<tvresponse>, t: Throwable) {
                 Log.d("MoviesDagger", t.toString())
             }
@@ -245,7 +245,7 @@ class MainActivitytv : AppCompatActivity() {
             }
         })
 
-        service.getpopulartv(api_key).enqueue(object : Callback<tvresponse> {
+        service.getpopulartv(api_key,"1").enqueue(object : Callback<tvresponse> {
             override fun onFailure(call: Call<tvresponse>, t: Throwable) {
                 Log.d("MoviesDagger", t.toString())
             }
@@ -278,7 +278,7 @@ class MainActivitytv : AppCompatActivity() {
             }
         })
 
-        service.gettopratedtv(api_key).enqueue(object : Callback<tvresponse> {
+        service.gettopratedtv(api_key,"1").enqueue(object : Callback<tvresponse> {
             override fun onFailure(call: Call<tvresponse>, t: Throwable) {
                 Log.d("MoviesDagger", t.toString())
             }
@@ -311,7 +311,7 @@ class MainActivitytv : AppCompatActivity() {
             }
         })
 
-        service.getontheair(api_key).enqueue(object : Callback<tvresponse> {
+        service.getontheair(api_key,"1").enqueue(object : Callback<tvresponse> {
             override fun onFailure(call: Call<tvresponse>, t: Throwable) {
                 Log.d("MoviesDagger", t.toString())
             }
