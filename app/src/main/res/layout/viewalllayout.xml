@@ -1,37 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
-        android:elevation="10dp"
-        app:cardCornerRadius="9dp"
         android:id="@+id/parentLayout"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginLeft="10dp">
+        android:layout_width="160sp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="20sp"
+        android:elevation="10sp"
+        android:orientation="vertical"
+        app:cardCornerRadius="9sp">
 
-    <LinearLayout
-            android:orientation="vertical"
+    <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="220sp"
+            android:orientation="vertical">
+
+        <ProgressBar
+                android:id="@+id/progressBarcv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleX="0.10"
+                android:scaleY="0.10"
+                android:textColor="@color/colorAccent"
+                android:visibility="visible" />
+
         <ImageView
 
-                android:layout_gravity="center"
-                android:background="@android:color/white"
                 android:id="@+id/liView"
-                android:layout_width="match_parent"
-                android:layout_height="210dp"/>
+                android:layout_width="160sp"
+                android:layout_height="170sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10sp"
+                android:background="#00FFFFFF" />
 
         <TextView
-                android:gravity="center"
-                android:background="@android:color/white"
-                android:textColor="@android:color/darker_gray"
+
+
                 android:id="@+id/ltView"
-                android:textSize="15sp"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginRight="5dp"/>
+                android:layout_height="40sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="180sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
 
-    </LinearLayout>
 
+                android:textColor="@android:color/darker_gray"
+
+                android:textSize="15sp" />
+
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

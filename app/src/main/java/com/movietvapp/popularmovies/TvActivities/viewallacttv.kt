@@ -3,6 +3,7 @@ package com.movietvapp.popularmovies.TvActivities
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import com.movietvapp.popularmovies.Model.tvresponse
 import com.movietvapp.popularmovies.Network.popinterface
@@ -45,6 +46,7 @@ class viewallacttv : AppCompatActivity() {
                     val data=response.body()
                     val data1= data?.results
 
+                    progressBarall.isVisible=false
 
                     //  rView.layoutManager =
                     //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
@@ -79,6 +81,7 @@ class viewallacttv : AppCompatActivity() {
 
                         val data=response.body()
                         val data1= data?.results
+                        progressBarall.isVisible=false
 
 
                         //  rView.layoutManager =
@@ -114,6 +117,7 @@ class viewallacttv : AppCompatActivity() {
 
                             val data=response.body()
                             val data1= data?.results
+                            progressBarall.isVisible=false
 
 
                             //  rView.layoutManager =
@@ -149,6 +153,7 @@ class viewallacttv : AppCompatActivity() {
 
                                 val data=response.body()
                                 val data1= data?.results
+                                progressBarall.isVisible=false
 
 
                                 //  rView.layoutManager =

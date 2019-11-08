@@ -7,6 +7,17 @@
 
 
 
+    <ProgressBar
+            android:id="@+id/progressBarall"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#00FFFFFF"
+            android:scaleX="0.10"
+            android:scaleY="0.10"
+            android:textColor="@color/colorAccent"
+            android:visibility="visible" />
 
 
     <ScrollView

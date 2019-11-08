@@ -15,69 +15,113 @@
 
             <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:orientation="horizontal"
-                    android:background="#324C58" android:layout_marginTop="-2dp" android:layout_alignParentStart="true">
-                <LinearLayout
-                        android:layout_width="wrap_content" android:layout_height="match_parent">
+                    android:layout_height="200sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="-2dp"
+                    android:background="#324C58"
+                    android:orientation="horizontal">
+
+                <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                    <ProgressBar
+                            android:id="@+id/progressBar4"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="75sp"
+                            android:layout_marginTop="70sp"
+                            android:background="#00FFFFFF"
+                            android:scaleX="0.50"
+                            android:scaleY="0.50"
+                            android:textColor="#E6EAEE"
+                            android:visibility="visible" />
+
                     <ImageView
+                            android:id="@+id/imagepeople"
+                            android:layout_width="120dp"
+                            android:layout_height="170dp"
                             android:layout_marginLeft="45dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginRight="30dp"
                             android:layout_marginBottom="10dp"
-                            android:layout_width="120dp" android:layout_height="170dp" android:layout_marginRight="30dp"
-                            android:id="@+id/imagepeople" android:visibility="visible"/>
-                </LinearLayout>
-                <LinearLayout android:layout_width="215dp" android:layout_height="match_parent"
-                              android:orientation="vertical">
+                            android:visibility="visible" />
+                </RelativeLayout>
 
-                    <TextView android:layout_width="match_parent" android:layout_height="35dp" android:text="TITLE"
-                              android:layout_marginTop="60dp"
-                              android:textColor="@android:color/white" android:id="@+id/peoplename"
-                              android:textSize="20sp"
-                              android:textStyle="bold"/>
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/peoplename"
+                            android:layout_width="match_parent"
+                            android:layout_height="35sp"
+                            android:layout_marginTop="60sp"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                     <ImageButton
+                            android:id="@+id/imageButton"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:src="@drawable/ic_star_2"
-                            android:id="@+id/imageButton" android:background="#324C58"
-                    />
-                    <TextView android:layout_width="80dp" android:layout_height="45dp"
-                              android:textColor="@android:color/white"
-                              android:text="TITLE"
-                              android:layout_marginLeft="30dp" android:layout_marginTop="-20dp"
-                              android:id="@+id/peoplepop"/>
+                            android:layout_height="wrap_content"
+                            android:background="#324C58"
+                            android:src="@drawable/ic_star_2" />
 
-                    <LinearLayout android:layout_width="wrap_content"
-                                  android:layout_height="wrap_content"
-                                  android:orientation="horizontal">
+                    <TextView
+                            android:id="@+id/peoplepop"
+                            android:layout_width="80sp"
+                            android:layout_height="45sp"
+                            android:layout_marginLeft="30sp"
+                            android:layout_marginTop="-20sp"
+                            android:text="   laoding ..."
+                            android:textColor="@android:color/white" />
 
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                  android:text="Birthday :  " android:textColor="@android:color/white"
-                                  android:textSize="20sp"/>
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                  android:id="@+id/peopledate"
-                                  android:text="Birthday" android:textColor="@android:color/white"
-                                  android:textSize="15sp"/>
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Birthday :  "
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp" />
+
+                        <TextView
+                                android:id="@+id/peopledate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  loading ..."
+                                android:textColor="@android:color/white"
+                                android:textSize="13sp" />
                     </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content" android:orientation="vertical">
-                <TextView android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:text="Biography"
-                          android:textColor="@android:color/black"
-                          android:layout_marginLeft="10dp"
-                          android:textSize="25sp"
-                />
-                <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-                          android:text="Biography"
-                          android:id="@+id/peoplebio"
-                          android:textColor="@android:color/darker_gray"
-                         android:layout_marginLeft="5dp"
-                          android:textSize="15sp"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:text="Biography"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp" />
+
+                <TextView
+                        android:id="@+id/peoplebio"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5sp"
+                        android:text="   loading ..."
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="15sp" />
 
             </LinearLayout>
         </LinearLayout>

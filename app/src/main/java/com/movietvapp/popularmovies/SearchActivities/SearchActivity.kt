@@ -3,6 +3,7 @@ package com.movietvapp.popularmovies.SearchActivities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.movietvapp.popularmovies.Model.Searchresonse
@@ -32,6 +33,7 @@ class SearchActivity : AppCompatActivity() {
         setContentView(R.layout.activity_search)
         val query = intent.getStringExtra("text")
         val type = intent.getStringExtra("type")
+        progressBarsearch.isVisible=true
 
 
         if (type=="people") {
@@ -47,7 +49,7 @@ class SearchActivity : AppCompatActivity() {
 
                     val data = response.body()
                     val data1 = data?.results
-
+                    progressBarsearch.isVisible=false
 
                     //  rView.layoutManager =
                     //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
@@ -80,6 +82,7 @@ class SearchActivity : AppCompatActivity() {
 
                         val data = response.body()
                         val data1 = data?.results
+                        progressBarsearch.isVisible=false
 
 
                         //  rView.layoutManager =
@@ -115,7 +118,7 @@ class SearchActivity : AppCompatActivity() {
 
                         val data = response.body()
                         val data1 = data?.results
-
+                        progressBarsearch.isVisible=false
 
                         //  rView.layoutManager =
                         //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
