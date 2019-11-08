@@ -17,7 +17,18 @@
                     android:id="@+id/rl1"
 
                     android:layout_width="match_parent"
-                    android:layout_height="200dp">
+                    android:layout_height="200dp"> <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#00FFFFFF"
+                    android:scaleX="0.10"
+                    android:scaleY="0.10"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="visible" />
+
                 <ImageView android:layout_width="match_parent" android:layout_height="200dp" android:id="@+id/iview"
                 />
                 <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
@@ -39,31 +50,53 @@
                     android:layout_height="200dp"
                     android:orientation="horizontal"
                     android:background="#324C58" android:layout_marginTop="-2dp" android:layout_alignParentStart="true">
-                <LinearLayout
+                <RelativeLayout
                         android:layout_width="wrap_content" android:layout_height="match_parent">
+                    <ProgressBar
+                            android:id="@+id/progressBar4"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="75sp"
+                            android:layout_marginTop="70sp"
+                            android:background="#00FFFFFF"
+                            android:scaleX="0.50"
+                            android:scaleY="0.50"
+                            android:textColor="#E6EAEE"
+                            android:visibility="visible" />
                     <ImageView
                             android:layout_marginLeft="40dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
                             android:layout_width="120dp" android:layout_height="170dp" android:layout_marginRight="30dp"
                             android:id="@+id/imageview2" android:visibility="visible"/>
-                </LinearLayout>
+                </RelativeLayout>
                 <LinearLayout android:layout_width="215dp" android:layout_height="match_parent"
                               android:orientation="vertical">
 
-                    <TextView android:layout_width="match_parent" android:layout_height="35dp" android:text="TITLE"
-                              android:layout_marginTop="60dp"
-                              android:textColor="@android:color/white" android:id="@+id/tv1" android:textSize="15sp"/>
+                    <TextView
+                            android:id="@+id/tv1"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="60dp"
+                            android:text="                       loading ...."
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp" />
 
                     <ImageButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:src="@drawable/ic_star_2"
                             android:id="@+id/imageButton" android:background="#324C58"
                     />
-                    <TextView android:layout_width="80dp" android:layout_height="45dp"
-                              android:textColor="@android:color/white"
-                              android:text="TITLE"
-                              android:layout_marginLeft="30dp" android:layout_marginTop="-20dp" android:id="@+id/tv3"/>
+
+                    <TextView
+                            android:id="@+id/tv3"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="-20dp"
+                            android:textColor="@android:color/white" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -77,13 +110,16 @@
                         android:fontFamily="sans-serif-black"
                         android:layout_height="30dp" android:id="@+id/textView"
                         android:textSize="22sp" android:layout_marginLeft="10sp"/>
+
                 <TextView
-                        android:text="TextView"
+                        android:id="@+id/tvoverview"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/tvoverview"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="10sp"
-                        android:layout_marginRight="10sp" android:layout_marginBottom="10sp"
-                        android:layout_marginTop="5dp"/>
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:text="         loading ..." />
             </LinearLayout>
             <LinearLayout
 
@@ -93,7 +129,7 @@
                         android:text="Cast"
                         android:layout_width="wrap_content"
                         android:fontFamily="sans-serif-black"
-                        android:layout_height="30dp" android:id="@+id/textView4"
+                        android:layout_height="30dp" android:id="@+id/textView41"
                         android:textSize="22sp" android:layout_marginLeft="10sp"/>
                 <androidx.recyclerview.widget.RecyclerView
                         android:layout_weight="1"
@@ -115,7 +151,7 @@
                         android:text="Similar Movies"
                         android:layout_width="wrap_content"
                         android:fontFamily="sans-serif-black"
-                        android:layout_height="30dp" android:id="@+id/textView5"
+                        android:layout_height="30dp" android:id="@+id/textView51"
                         android:textSize="22sp" android:layout_marginLeft="10sp"/>
                 <androidx.recyclerview.widget.RecyclerView
                         android:layout_weight="1"
@@ -137,7 +173,7 @@
                         android:text="Trailer"
                         android:layout_width="wrap_content"
                         android:fontFamily="sans-serif-black"
-                        android:layout_height="30dp" android:id="@+id/textView6"
+                        android:layout_height="30dp" android:id="@+id/textView61"
                         android:textSize="22sp" android:layout_marginLeft="10sp"/>
                 <androidx.recyclerview.widget.RecyclerView
                         android:layout_weight="1"

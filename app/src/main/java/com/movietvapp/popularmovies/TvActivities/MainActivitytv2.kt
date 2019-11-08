@@ -3,6 +3,7 @@ package com.movietvapp.popularmovies.TvActivities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.movietvapp.popularmovies.Model.*
@@ -13,6 +14,8 @@ import com.movietvapp.popularmovies.tvadapters.tvcastdapter
 import com.movietvapp.popularmovies.tvadapters.videoadaptertv
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_4.*
+
+import kotlinx.android.synthetic.main.activity_second.*
 import kotlinx.android.synthetic.main.activity_second.imageview2
 import kotlinx.android.synthetic.main.activity_second.iview
 import kotlinx.android.synthetic.main.activity_second.tv1
@@ -37,6 +40,10 @@ class MainActivitytv2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_4)
         val id = intent.getStringExtra("id").toInt()
+
+        textView41.isVisible=false
+        textView51.isVisible=false
+        textView61.isVisible=false
 
         val type = intent.getStringExtra("type")
         val service=retrofit.create(popinterface::class.java)
@@ -83,7 +90,7 @@ class MainActivitytv2 : AppCompatActivity() {
                 val data=response.body()
                 val data1=data?.cast
 
-
+                textView41.isVisible=true
 
                 //  rView.layoutManager =
                 //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
@@ -115,6 +122,7 @@ class MainActivitytv2 : AppCompatActivity() {
 
                 val data=response.body()
                 val data1= data?.results
+                textView51.isVisible=true
 
 
                 //  rView.layoutManager =
@@ -148,7 +156,7 @@ class MainActivitytv2 : AppCompatActivity() {
                 val data=response.body()
                 val data1= data?.results
 
-
+                textView61.isVisible=false
                 //  rView.layoutManager =
                 //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
 

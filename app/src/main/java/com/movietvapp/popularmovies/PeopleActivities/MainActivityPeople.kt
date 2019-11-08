@@ -11,6 +11,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.movietvapp.popularmovies.Model.peopleresponse
@@ -23,6 +24,7 @@ import com.movietvapp.popularmovies.PeopleAdapter.popularpeopleadapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.movietvapp.popularmovies.MainActivityFavourite
 import kotlinx.android.synthetic.main.activity_5.*
+import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -42,6 +44,8 @@ class MainActivityPeople : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_5)
+
+         textpeople.isVisible=false
 
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
@@ -156,6 +160,8 @@ class MainActivityPeople : AppCompatActivity() {
 
                 val data=response.body()
                 val data1= data?.results
+                progressBar3.isVisible=false
+                textpeople.isVisible=true
 
 
                 //  rView.layoutManager =

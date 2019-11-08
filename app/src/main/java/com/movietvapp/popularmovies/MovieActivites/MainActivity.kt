@@ -233,8 +233,9 @@ class MainActivity : AppCompatActivity() {
 
                 text1.isVisible=true
                 text10.isVisible=true
-
                 progressBar.isVisible=false
+
+
 
                 rView.layoutManager =
                     LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL,false)
@@ -265,6 +266,7 @@ class MainActivity : AppCompatActivity() {
                 val data1= data?.results
                 text20.isVisible=true
                 text2.isVisible=true
+                progressBar.isVisible=false
 
 
                 //  rView.layoutManager =
@@ -299,7 +301,7 @@ class MainActivity : AppCompatActivity() {
                 val data1= data?.results
                 text3.isVisible=true
                 text30.isVisible=true
-
+                progressBar.isVisible=false
 
 
                 //  rView.layoutManager =
@@ -337,6 +339,7 @@ class MainActivity : AppCompatActivity() {
                 val data1= data?.results
                 text0.isVisible=true
                 text00.isVisible=true
+                progressBar.isVisible=false
 
 
                 //  rView.layoutManager =

@@ -204,7 +204,7 @@ class MainActivitytv : AppCompatActivity() {
 
 
         }
-        
+
 
         service.getairingtoday(api_key,language).enqueue(object : Callback<tvresponse> {
             override fun onFailure(call: Call<tvresponse>, t: Throwable) {
@@ -219,6 +219,7 @@ class MainActivitytv : AppCompatActivity() {
                 val data1= data?.results
                 text0.isVisible=true
                 text00tv.isVisible=true
+                progressBar2.isVisible=false
 
 
 
@@ -291,7 +292,7 @@ class MainActivitytv : AppCompatActivity() {
                 text2.isVisible=true
                 text20tv.isVisible=true
 
-
+                progressBar2.isVisible=false
                 //  rView.layoutManager =
                 //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)
 
@@ -323,7 +324,7 @@ class MainActivitytv : AppCompatActivity() {
                 val data1= data?.results
                 text3.isVisible=true
                 text30tv.isVisible=true
-
+                progressBar2.isVisible=false
 
                 //  rView.layoutManager =
                 //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)

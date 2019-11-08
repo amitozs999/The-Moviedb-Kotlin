@@ -1,51 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
-        android:elevation="10dp"
         android:id="@+id/parentLayout"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-                  android:orientation="vertical">
+        android:layout_width="160sp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="10sp"
+        android:elevation="10sp"
+        android:orientation="vertical"
+        app:cardCornerRadius="2sp"
+        app:cardElevation="2sp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
         <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
             <ImageView
 
-                    android:layout_gravity="center"
-                    android:background="@android:color/white"
                     android:id="@+id/liViewpopular"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"/>
+                    android:layout_height="200sp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/white" />
 
             <TextView
-                    android:gravity="center"
-                    android:background="@android:color/white"
-                    android:textColor="@android:color/darker_gray"
                     android:id="@+id/ltViewpopular"
-                    android:textSize="15sp"
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_height="20sp"
+                    android:layout_marginRight="5sp"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp" />
 
         </LinearLayout>
 
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="horizontal" android:paddingLeft="90dp">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="90sp">
 
             <ImageButton
+                    android:id="@+id/imageButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:src="@drawable/ic_star_2"
-                    android:id="@+id/imageButton" android:background="#00F4F8FA"
-            />
-            <TextView android:layout_width="wrap_content" android:layout_height="25dp"
-                      android:textColor="@android:color/black"
-                      android:textStyle="bold"
-                      android:text="TITLE"
-                      android:id="@+id/tvpopularity" android:layout_marginTop="4dp"/>
+                    android:layout_height="wrap_content"
+                    android:background="#00F4F8FA"
+                    android:src="@drawable/ic_star_2" />
+
+            <TextView
+                    android:id="@+id/tvpopularity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25sp"
+                    android:layout_marginTop="4sp"
+                    android:text=" ..."
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 

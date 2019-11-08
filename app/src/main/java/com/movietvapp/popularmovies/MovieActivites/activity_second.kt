@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
@@ -20,6 +21,7 @@ import com.movietvapp.popularmovies.movieadapters.movieadapter
 import com.movietvapp.popularmovies.movieadapters.moviecastdapter
 import com.movietvapp.popularmovies.movieadapters.videoadapter
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_second.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -44,6 +46,9 @@ class activity_second : AppCompatActivity() {
         setContentView(R.layout.activity_second)
 //        val toolbar: Toolbar = findViewById(R.id.toolbar)
 //        setSupportActionBar(toolbar)
+        textView4.isVisible=false
+        textView5.isVisible=false
+        textView6.isVisible=false
 
 
         val id = intent.getStringExtra("id").toInt()
@@ -167,6 +172,7 @@ class activity_second : AppCompatActivity() {
 
                 val data=response.body()
                 val data1= data?.cast
+                textView4.isVisible=true
 
 
                 //  rView.layoutManager =
@@ -199,6 +205,7 @@ class activity_second : AppCompatActivity() {
 
                 val data=response.body()
                 val data1= data?.results
+                textView5.isVisible=true
 
 
                 //  rView.layoutManager =
@@ -232,7 +239,7 @@ class activity_second : AppCompatActivity() {
 
                 val data=response.body()
                 val data1= data?.results
-
+                textView6.isVisible=true
 
                 //  rView.layoutManager =
                 //     GridLayoutManager(this@MainActivity,2,RecyclerView.VERTICAL,false)

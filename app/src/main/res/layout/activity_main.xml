@@ -83,13 +83,14 @@
                         android:textColor="@android:color/darker_gray"
                         android:textSize="20sp" />
             </LinearLayout>
-            <androidx.recyclerview.widget.RecyclerView
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
 
+            <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rView0"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
 
             </androidx.recyclerview.widget.RecyclerView>
 

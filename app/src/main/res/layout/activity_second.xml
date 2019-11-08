@@ -19,11 +19,23 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="200sp">
+                <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#00FFFFFF"
+                        android:scaleX="0.10"
+                        android:scaleY="0.10"
+                        android:textColor="@color/colorAccent"
+                        android:visibility="visible" />
 
                 <ImageView
                         android:id="@+id/iview"
                         android:layout_width="match_parent"
                         android:layout_height="200sp" />
+
 
                 <RelativeLayout
                         android:layout_width="wrap_content"
@@ -57,10 +69,24 @@
                     android:orientation="horizontal"
                     android:scrollbarSize="4sp">
 
-                <LinearLayout
+                <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:scrollbarSize="4sp">
+
+                    <ProgressBar
+                            android:id="@+id/progressBar4"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="75sp"
+                            android:layout_marginTop="70sp"
+                            android:background="#00FFFFFF"
+                            android:scaleX="0.50"
+                            android:scaleY="0.50"
+                            android:textColor="#E6EAEE"
+                            android:visibility="visible" />
 
                     <ImageView
                             android:id="@+id/imageview2"
@@ -72,7 +98,7 @@
                             android:layout_marginBottom="10sp"
                             android:scrollbarSize="4sp"
                             android:visibility="visible" />
-                </LinearLayout>
+                </RelativeLayout>
 
                 <LinearLayout
                         android:layout_width="match_parent"
@@ -96,6 +122,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="35sp"
                             android:scrollbarSize="4sp"
+                            android:text="              loading ..."
                             android:textColor="@android:color/white"
                             android:textSize="15sp" />
 
@@ -144,7 +171,7 @@
                         android:layout_marginRight="10sp"
                         android:layout_marginBottom="10sp"
                         android:scrollbarSize="4sp"
-                        android:text="TextView" />
+                        android:text=".                                                                                                                                    Loading ....                                      " />
             </LinearLayout>
 
             <LinearLayout
