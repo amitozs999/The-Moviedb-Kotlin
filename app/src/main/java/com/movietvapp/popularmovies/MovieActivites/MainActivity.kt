@@ -215,7 +215,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-            service.getPopular(api_key).enqueue(object : Callback<movieresponse> {
+            service.getPopular(api_key,"1").enqueue(object : Callback<movieresponse> {
             override fun onFailure(call: Call<movieresponse>, t: Throwable) {
                 Log.d("MoviesDagger", t.toString())
             }
@@ -253,7 +253,7 @@ class MainActivity : AppCompatActivity() {
         })
 
 
-        service.getToprated(api_key).enqueue(object : Callback<movieresponse> {
+        service.getToprated(api_key,"1").enqueue(object : Callback<movieresponse> {
             override fun onFailure(call: Call<movieresponse>, t: Throwable) {
                 Log.d("MoviesDagger", t.toString())
             }
@@ -288,7 +288,7 @@ class MainActivity : AppCompatActivity() {
         })
 
 
-        service.getUpcoming(api_key).enqueue(object : Callback<movieresponse> {
+        service.getUpcoming(api_key,"1").enqueue(object : Callback<movieresponse> {
             override fun onFailure(call: Call<movieresponse>, t: Throwable) {
                 Log.d("MoviesDagger", t.toString())
             }
@@ -323,7 +323,7 @@ class MainActivity : AppCompatActivity() {
         })
 
 
-        service.getNowplaying(api_key).enqueue(object : Callback<movieresponse> {
+        service.getNowplaying(api_key,"1").enqueue(object : Callback<movieresponse> {
 
 
 

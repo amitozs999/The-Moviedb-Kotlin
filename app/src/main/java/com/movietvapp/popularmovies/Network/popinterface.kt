@@ -12,29 +12,29 @@ interface popinterface {
 
     @GET("3/movie/popular")
     fun getPopular(
-        @Query("api_key") key : String
-       // @Query("page") page : String
+        @Query("api_key") key : String,
+       @Query("page") page : String
     ) : Call<movieresponse>
 
     @GET("3/movie/top_rated")
     fun getToprated(
 
-        @Query("api_key") key:String
-        // @Query("page") page : String
+        @Query("api_key") key:String,
+        @Query("page") page : String
     ) : Call<movieresponse>
 
     @GET("3/movie/upcoming")
     fun getUpcoming(
 
-        @Query("api_key") key:String
-        // @Query("page") page : String
+        @Query("api_key") key:String,
+        @Query("page") page : String
     ) : Call<movieresponse>
 
     @GET("3/movie/now_playing")
     fun getNowplaying(
 
-        @Query("api_key") key:String
-        // @Query("page") page : String
+        @Query("api_key") key:String,
+         @Query("page") page : String
     ) : Call<movieresponse>
 
     @GET("3/movie/{movie_id}/images")
