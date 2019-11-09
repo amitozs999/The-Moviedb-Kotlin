@@ -61,8 +61,7 @@ class MainActivityFavourite : AppCompatActivity() {
                     return@setOnNavigationItemSelectedListener  true
                 }
                 R.id.FAV -> {
-                    val  intent4= Intent(this, MainActivityFavourite::class.java)
-                    startActivity(intent4)
+
                     return@setOnNavigationItemSelectedListener  true
                 }
 
@@ -126,6 +125,7 @@ class MainActivityFavourite : AppCompatActivity() {
                                 favList,
                                 check
                             )
+                        rvfav.adapter!!.notifyDataSetChanged()
                     }
 
 
@@ -149,6 +149,7 @@ class MainActivityFavourite : AppCompatActivity() {
                 }
             })
         }
+        favList.clear()
 
     }
     override fun onBackPressed() {

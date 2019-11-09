@@ -77,8 +77,16 @@
                     android:layout_height="match_parent">
 
             </androidx.recyclerview.widget.RecyclerView>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="80dp"
+                    ></LinearLayout>
+
+
+
         </LinearLayout>
+
+
     </ScrollView>
 </RelativeLayout>
+
 </LinearLayout>
 

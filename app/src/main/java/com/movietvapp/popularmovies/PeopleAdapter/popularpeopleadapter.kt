@@ -44,7 +44,7 @@ class popularpeopleadapter(val context: Context, val namelist:List<people>, val 
         holder.itemView.ltViewpopular.text=item1.name
        holder.itemView.tvpopularity.text= item1.popularity.toString()
         val target=item1.profile_path
-        Picasso.get().load(baseURL+target).resize(170,200).into(holder.itemView.liViewpopular)
+        Picasso.get().load(baseURL+target).resize(160,165).into(holder.itemView.liViewpopular)
 
         holder.itemView.parentLayout.setOnClickListener {
 

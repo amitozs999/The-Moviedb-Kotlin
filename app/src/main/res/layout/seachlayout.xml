@@ -9,29 +9,48 @@
         android:layout_width="140dp"
         android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp">
 
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="220sp"
+            android:orientation="vertical">
+
+        <ProgressBar
+                android:id="@+id/progressBarcv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleX="0.10"
+                android:scaleY="0.10"
+                android:textColor="@color/colorAccent"
+                android:visibility="visible" />
+
         <ImageView
 
-                android:layout_gravity="center"
-                android:background="@android:color/white"
                 android:id="@+id/liView"
-                android:layout_width="match_parent"
-                android:layout_height="210dp"/>
+                android:layout_width="160sp"
+                android:layout_height="170sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10sp"
+                android:background="#00FFFFFF" />
 
         <TextView
-                android:gravity="center"
-                android:background="@android:color/white"
-                android:textColor="@android:color/darker_gray"
-                android:id="@+id/ltView"
-                android:textSize="15sp"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginRight="5dp"/>
 
-    </LinearLayout>
+
+                android:id="@+id/ltView"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="180sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+
+
+                android:textColor="@android:color/darker_gray"
+
+                android:textSize="15sp" />
+
+    </RelativeLayout>
 
 
 </androidx.cardview.widget.CardView>
