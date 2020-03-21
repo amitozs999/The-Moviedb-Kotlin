@@ -5,7 +5,10 @@ An android app to search movies, or tv-series and people. Also save them as favo
 <img src="https://github.com/amitozs999/The-Moviedb-Kotlin/blob/master/app/video/Screenshot_20200321-183655_Movies%20Point.jpg" width="280" height="490"/>
 <img src="https://github.com/amitozs999/The-Moviedb-Kotlin/blob/master/app/video/Screenshot_20200321-183718_Movies%20Point.jpg" width="280" height="490"/>
 <img src="https://github.com/amitozs999/The-Moviedb-Kotlin/blob/master/app/video/Screenshot_20200321-183749_Movies%20Point.jpg" width="280" height="490"/>
-<img src="https://github.com/amitozs999/The-Moviedb-Kotlin/blob/master/app/video/Screenshot_20200321-183706_Movies%20Point.jpg" width="280" height="490"/>
+ <br> <br>
+<img src="https://github.com/amitozs999/The-Moviedb-Kotlin/blob/master/app/video/Screenshot_20200321-193428_Movies%20Point.jpg" width="280" height="490"/>
+<img src="https://github.com/amitozs999/The-Moviedb-Kotlin/blob/master/app/video/Screenshot_20200321-193446_Movies%20Point.jpg" width="280" height="490"/>
+  <img src="https://github.com/amitozs999/The-Moviedb-Kotlin/blob/master/app/video/Screenshot_20200321-183706_Movies%20Point.jpg" width="280" height="490"/>
 </p>
 <br><br>
 <h1>Simple Working</h1>
